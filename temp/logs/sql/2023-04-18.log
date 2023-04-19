@@ -1,0 +1,30 @@
+2023-04-18 15:07:51.349 [DEBU] {e88acba2b5f5561716c53b7f0e6f28c9} [  9 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2023-04-18 15:07:51.356 [DEBU] {e88acba2b5f5561716c53b7f0e6f28c9} [  7 ms] [default] [shop] [rows:1  ] INSERT INTO `rotation_info`(`pic_url`,`sort`,`updated_at`,`link`,`created_at`) VALUES('xxxxxx',0,'2023-04-18 15:07:51','yyyy','2023-04-18 15:07:51') 
+2023-04-18 15:31:22.233 [DEBU] {0870e0cff9f6561762232b183e28b847} [  4 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2023-04-18 15:31:22.236 [DEBU] {0870e0cff9f6561762232b183e28b847} [  2 ms] [default] [shop] [rows:1  ] INSERT INTO `rotation_info`(`created_at`,`pic_url`,`updated_at`,`link`,`sort`) VALUES('2023-04-18 15:31:22','xxxxxx','2023-04-18 15:31:22','yyyy',0) 
+2023-04-18 15:47:00.465 [DEBU] {e8715338d7f75617a52538246116e582} [  4 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2023-04-18 15:47:00.468 [DEBU] {e8715338d7f75617a52538246116e582} [  2 ms] [default] [shop] [rows:1  ] INSERT INTO `rotation_info`(`pic_url`,`link`,`created_at`,`sort`,`updated_at`) VALUES('xxxxxx','yyyy','2023-04-18 15:47:00',0,'2023-04-18 15:47:00') 
+2023-04-18 16:19:46.194 [DEBU] {005dc54986f95617b306850e930dbcc8} [  3 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2023-04-18 16:19:46.198 [DEBU] {005dc54986f95617b306850e930dbcc8} [  3 ms] [default] [shop] [rows:1  ] INSERT INTO `rotation_info`(`sort`,`pic_url`,`created_at`,`link`,`updated_at`) VALUES(0,'xxxxxx','2023-04-18 16:19:46','yyyy','2023-04-18 16:19:46') 
+2023-04-18 16:29:31.025 [DEBU] {1826df2829fa5617ae3b691b729a9efd} [  4 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2023-04-18 16:29:31.030 [DEBU] {1826df2829fa5617ae3b691b729a9efd} [  4 ms] [default] [shop] [rows:1  ] INSERT INTO `rotation_info`(`pic_url`,`link`,`created_at`,`sort`,`updated_at`) VALUES('xxxxxx','yyyy','2023-04-18 16:29:31',10,'2023-04-18 16:29:31') 
+2023-04-18 16:29:53.097 [DEBU] {20bbfce52efa5617af3b691bcadaab98} [  2 ms] [default] [shop] [rows:1  ] INSERT INTO `rotation_info`(`created_at`,`pic_url`,`updated_at`,`link`,`sort`) VALUES('2023-04-18 16:29:53','xxxxxx','2023-04-18 16:29:53','yyyy',1) 
+2023-04-18 16:37:11.972 [DEBU] {082838c195fa56178c36497a1b34e056} [  2 ms] [default] [shop] [rows:0  ] [txid:1] BEGIN
+2023-04-18 16:37:11.975 [DEBU] {082838c195fa56178c36497a1b34e056} [  2 ms] [default] [shop] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `rotation_info`
+2023-04-18 16:37:11.977 [DEBU] {082838c195fa56178c36497a1b34e056} [  2 ms] [default] [shop] [rows:1  ] [txid:1] UPDATE `rotation_info` SET `deleted_at`='2023-04-18 16:37:11' WHERE (`id`=1) AND `deleted_at` IS NULL
+2023-04-18 16:37:11.978 [DEBU] {082838c195fa56178c36497a1b34e056} [  1 ms] [default] [shop] [rows:0  ] [txid:1] COMMIT
+2023-04-18 16:37:25.792 [DEBU] {d01628f998fa56178d36497a67820de9} [  0 ms] [default] [shop] [rows:0  ] [txid:2] BEGIN
+2023-04-18 16:37:25.793 [DEBU] {d01628f998fa56178d36497a67820de9} [  1 ms] [default] [shop] [rows:1  ] [txid:2] UPDATE `rotation_info` SET `deleted_at`='2023-04-18 16:37:25' WHERE (`id`=8) AND `deleted_at` IS NULL
+2023-04-18 16:37:25.794 [DEBU] {d01628f998fa56178d36497a67820de9} [  1 ms] [default] [shop] [rows:0  ] [txid:2] COMMIT
+2023-04-18 16:41:42.414 [DEBU] {98d76220c2fa56178e36497a026eabd0} [  3 ms] [default] [shop] [rows:1  ] INSERT INTO `rotation_info`(`link`,`sort`,`created_at`,`pic_url`,`updated_at`) VALUES('yyyy',1,'2023-04-18 16:41:42','xxxxxx','2023-04-18 16:41:42') 
+2023-04-18 17:01:26.742 [DEBU] {d8e55d78e8fb5617c8a4a8726f560199} [  1 ms] [default] [shop] [rows:0  ] [txid:1] BEGIN
+2023-04-18 17:01:26.745 [DEBU] {d8e55d78e8fb5617c8a4a8726f560199} [  2 ms] [default] [shop] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `rotation_info`
+2023-04-18 17:01:26.745 [DEBU] {d8e55d78e8fb5617c8a4a8726f560199} [  0 ms] [default] [shop] [rows:1  ] [txid:1] DELETE FROM `rotation_info` WHERE `id`=8
+2023-04-18 17:01:26.746 [DEBU] {d8e55d78e8fb5617c8a4a8726f560199} [  1 ms] [default] [shop] [rows:0  ] [txid:1] COMMIT
+2023-04-18 17:16:38.719 [DEBU] {f8924ccebcfc5617c9a4a87263c85501} [  4 ms] [default] [shop] [rows:1  ] INSERT INTO `rotation_info`(`created_at`,`pic_url`,`updated_at`,`link`,`sort`) VALUES('2023-04-18 17:16:38','xxxxxx','2023-04-18 17:16:38','yyyy',1) 
+2023-04-18 17:18:58.277 [DEBU] {c898d24cddfc5617cca4a87230f86a80} [  1 ms] [default] [shop] [rows:0  ] [txid:2] BEGIN
+2023-04-18 17:18:58.278 [DEBU] {c898d24cddfc5617cca4a87230f86a80} [  1 ms] [default] [shop] [rows:1  ] [txid:2] DELETE FROM `rotation_info` WHERE `id`=9
+2023-04-18 17:18:58.279 [DEBU] {c898d24cddfc5617cca4a87230f86a80} [  1 ms] [default] [shop] [rows:0  ] [txid:2] COMMIT
+2023-04-18 17:19:07.073 [DEBU] {78f42159dffc5617cda4a872b3e32e4f} [  0 ms] [default] [shop] [rows:0  ] [txid:3] BEGIN
+2023-04-18 17:19:07.074 [DEBU] {78f42159dffc5617cda4a872b3e32e4f} [  1 ms] [default] [shop] [rows:1  ] [txid:3] DELETE FROM `rotation_info` WHERE `id`=1
+2023-04-18 17:19:07.075 [DEBU] {78f42159dffc5617cda4a872b3e32e4f} [  1 ms] [default] [shop] [rows:0  ] [txid:3] COMMIT
