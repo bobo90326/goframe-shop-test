@@ -12,6 +12,7 @@ var Rotation = cRotation{}
 
 type cRotation struct{}
 
+//新增
 func (a *cRotation) Create(ctx context.Context, req *backend.RotationReq) (res *backend.RotationRes, err error) {
 	out, err := service.Rotation().Create(ctx, model.RotationCreateInput{
 		RotationCreateUpdateBase: model.RotationCreateUpdateBase{
