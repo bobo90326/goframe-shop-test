@@ -1,0 +1,23 @@
+2023-04-30 23:22:49.225 [DEBU] {a8313506afbf5a17caf74e674c01ac01} [  4 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2023-04-30 23:22:49.229 [DEBU] {a8313506afbf5a17caf74e674c01ac01} [  2 ms] [default] [shop] [rows:1  ] INSERT INTO `rotation_info`(`pic_url`,`created_at`,`link`,`updated_at`,`sort`) VALUES('111','2023-04-30 23:22:49','111','2023-04-30 23:22:49',11) 
+2023-04-30 23:28:15.048 [DEBU] {b068e1e2fabf5a17d5f74e674f5825e3} [  3 ms] [default] [shop] [rows:1  ] INSERT INTO `rotation_info`(`pic_url`,`updated_at`,`link`,`sort`,`created_at`) VALUES('111','2023-04-30 23:28:15','111',11,'2023-04-30 23:28:15') 
+2023-04-30 23:28:17.196 [DEBU] {607ffe62fbbf5a17d6f74e67e35b0cd5} [  1 ms] [default] [shop] [rows:1  ] INSERT INTO `rotation_info`(`link`,`updated_at`,`pic_url`,`created_at`,`sort`) VALUES('111','2023-04-30 23:28:17','111','2023-04-30 23:28:17',11) 
+2023-04-30 23:28:17.843 [DEBU] {881f9289fbbf5a17d7f74e67c0e661ae} [  1 ms] [default] [shop] [rows:1  ] INSERT INTO `rotation_info`(`link`,`sort`,`created_at`,`pic_url`,`updated_at`) VALUES('111',11,'2023-04-30 23:28:17','111','2023-04-30 23:28:17') 
+2023-04-30 23:28:18.270 [DEBU] {586effa2fbbf5a17d8f74e67a222a36b} [  1 ms] [default] [shop] [rows:1  ] INSERT INTO `rotation_info`(`link`,`updated_at`,`sort`,`pic_url`,`created_at`) VALUES('111','2023-04-30 23:28:18',11,'111','2023-04-30 23:28:18') 
+2023-04-30 23:33:34.325 [DEBU] {782d633945c05a17e5f74e673759689a} [  1 ms] [default] [shop] [rows:0  ] [txid:1] BEGIN
+2023-04-30 23:33:34.328 [DEBU] {782d633945c05a17e5f74e673759689a} [  2 ms] [default] [shop] [rows:1  ] [txid:1] UPDATE `rotation_info` SET `link`='rrr',`updated_at`='2023-04-30 23:33:34',`sort`=1,`pic_url`='rrr' WHERE (`id`=1) AND `deleted_at` IS NULL
+2023-04-30 23:33:34.329 [DEBU] {782d633945c05a17e5f74e673759689a} [  0 ms] [default] [shop] [rows:0  ] [txid:1] COMMIT
+2023-04-30 23:36:44.934 [DEBU] {6088ff2b6ec05a170b9b351306502be8} [  1 ms] [default] [shop] [rows:0  ] [txid:1] BEGIN
+2023-04-30 23:36:44.938 [DEBU] {6088ff2b6ec05a170b9b351306502be8} [  3 ms] [default] [shop] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `rotation_info`
+2023-04-30 23:36:44.939 [DEBU] {6088ff2b6ec05a170b9b351306502be8} [  1 ms] [default] [shop] [rows:1  ] [txid:1] UPDATE `rotation_info` SET `updated_at`='2023-04-30 23:36:44',`pic_url`='rrr',`link`='rrr',`sort`=1 WHERE (`id`=1) AND `deleted_at` IS NULL
+2023-04-30 23:36:44.940 [DEBU] {6088ff2b6ec05a170b9b351306502be8} [  1 ms] [default] [shop] [rows:0  ] [txid:1] COMMIT
+2023-04-30 23:37:41.180 [DEBU] {48f2f64d76c05a1783149f5aace6c8af} [  2 ms] [default] [shop] [rows:0  ] [txid:1] BEGIN
+2023-04-30 23:37:41.184 [DEBU] {48f2f64d76c05a1783149f5aace6c8af} [  3 ms] [default] [shop] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `rotation_info`
+2023-04-30 23:37:41.186 [DEBU] {48f2f64d76c05a1783149f5aace6c8af} [  1 ms] [default] [shop] [rows:1  ] [txid:1] UPDATE `rotation_info` SET `link`='rrr',`sort`=1,`updated_at`='2023-04-30 23:37:41',`pic_url`='rrr' WHERE (`id`=1) AND `deleted_at` IS NULL
+2023-04-30 23:37:41.187 [DEBU] {48f2f64d76c05a1783149f5aace6c8af} [  1 ms] [default] [shop] [rows:0  ] [txid:1] COMMIT
+2023-04-30 23:38:08.221 [DEBU] {c89f5a6b81c05a1784149f5a3bf69a68} [  0 ms] [default] [shop] [rows:0  ] [txid:2] BEGIN
+2023-04-30 23:38:08.223 [DEBU] {c89f5a6b81c05a1784149f5a3bf69a68} [  1 ms] [default] [shop] [rows:1  ] [txid:2] UPDATE `rotation_info` SET `link`='rrr',`sort`=1,`updated_at`='2023-04-30 23:38:08',`pic_url`='rrr' WHERE (`id`=1) AND `deleted_at` IS NULL
+2023-04-30 23:38:08.224 [DEBU] {c89f5a6b81c05a1784149f5a3bf69a68} [  1 ms] [default] [shop] [rows:0  ] [txid:2] COMMIT
+2023-04-30 23:39:45.881 [DEBU] {40f850279ac05a178a149f5a7878c586} [  2 ms] [default] [shop] [rows:0  ] [txid:3] BEGIN
+2023-04-30 23:39:45.883 [DEBU] {40f850279ac05a178a149f5a7878c586} [  2 ms] [default] [shop] [rows:1  ] [txid:3] UPDATE `rotation_info` SET `sort`=1,`pic_url`='rrr1',`updated_at`='2023-04-30 23:39:45',`link`='rrr' WHERE (`id`=1) AND `deleted_at` IS NULL
+2023-04-30 23:39:45.884 [DEBU] {40f850279ac05a178a149f5a7878c586} [  1 ms] [default] [shop] [rows:0  ] [txid:3] COMMIT
