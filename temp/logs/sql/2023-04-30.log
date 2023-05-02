@@ -21,3 +21,5 @@
 2023-04-30 23:39:45.881 [DEBU] {40f850279ac05a178a149f5a7878c586} [  2 ms] [default] [shop] [rows:0  ] [txid:3] BEGIN
 2023-04-30 23:39:45.883 [DEBU] {40f850279ac05a178a149f5a7878c586} [  2 ms] [default] [shop] [rows:1  ] [txid:3] UPDATE `rotation_info` SET `sort`=1,`pic_url`='rrr1',`updated_at`='2023-04-30 23:39:45',`link`='rrr' WHERE (`id`=1) AND `deleted_at` IS NULL
 2023-04-30 23:39:45.884 [DEBU] {40f850279ac05a178a149f5a7878c586} [  1 ms] [default] [shop] [rows:0  ] [txid:3] COMMIT
+2023-04-30 23:43:18.732 [DEBU] {1842ded7cbc05a17e36d7c7d97bf3f52} [  4 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2023-04-30 23:43:18.735 [DEBU] {1842ded7cbc05a17e36d7c7d97bf3f52} [  2 ms] [default] [shop] [rows:1  ] INSERT INTO `rotation_info`(`link`,`updated_at`,`sort`,`pic_url`,`created_at`) VALUES('111','2023-04-30 23:43:18',11,'111','2023-04-30 23:43:18') 

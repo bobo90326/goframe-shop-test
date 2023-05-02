@@ -1,0 +1,11 @@
+2023-05-02 23:30:08.371 [DEBU] {30a3bb673e5d5b17ab6d9034bc1e9bd5} [  6 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2023-05-02 23:30:08.378 [DEBU] {30a3bb673e5d5b17ab6d9034bc1e9bd5} [  6 ms] [default] [shop] [rows:10 ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at`,`deleted_at` FROM `rotation_info` WHERE `deleted_at` IS NULL ORDER BY `id` DESC LIMIT 0,10
+2023-05-02 23:30:08.381 [DEBU] {30a3bb673e5d5b17ab6d9034bc1e9bd5} [  2 ms] [default] [shop] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2023-05-02 23:30:08.384 [DEBU] {30a3bb673e5d5b17ab6d9034bc1e9bd5} [  2 ms] [default] [shop] [rows:10 ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL ORDER BY `id` DESC LIMIT 0,10
+2023-05-02 23:35:01.599 [DEBU] {d09274ad825d5b17568d4b1f10790bf9} [  7 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2023-05-02 23:35:01.601 [DEBU] {d09274ad825d5b17568d4b1f10790bf9} [  1 ms] [default] [shop] [rows:10 ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at`,`deleted_at` FROM `rotation_info` WHERE `deleted_at` IS NULL ORDER BY `id` DESC LIMIT 0,10
+2023-05-02 23:35:01.603 [DEBU] {d09274ad825d5b17568d4b1f10790bf9} [  0 ms] [default] [shop] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2023-05-02 23:35:46.995 [DEBU] {50984d3f8d5d5b1740f5c14ecf5addaa} [  6 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2023-05-02 23:35:46.997 [DEBU] {50984d3f8d5d5b1740f5c14ecf5addaa} [  1 ms] [default] [shop] [rows:10 ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at`,`deleted_at` FROM `rotation_info` WHERE `deleted_at` IS NULL ORDER BY `id` DESC LIMIT 0,10
+2023-05-02 23:35:46.999 [DEBU] {50984d3f8d5d5b1740f5c14ecf5addaa} [  0 ms] [default] [shop] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2023-05-02 23:35:47.001 [DEBU] {50984d3f8d5d5b1740f5c14ecf5addaa} [  1 ms] [default] [shop] [rows:10 ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL ORDER BY `id` DESC LIMIT 0,10
