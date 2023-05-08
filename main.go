@@ -8,6 +8,7 @@ import (
 	_ "goframe-shop-test/internal/packed"
 )
 
+//启动
 func main() {
 	cmd.Main.Run(gctx.New())
 }
