@@ -19,8 +19,9 @@ var (
 			s.Group("/", func(group *ghttp.RouterGroup) {
 				group.Middleware(ghttp.MiddlewareHandlerResponse)
 				group.Bind(
-					controller.Hello,
-					controller.Rotation,
+					controller.Hello,    //示例
+					controller.Rotation, //轮播图
+					controller.Position, //手工位
 				)
 			})
 			s.Run()

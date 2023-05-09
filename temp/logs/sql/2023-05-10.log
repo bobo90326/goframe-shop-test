@@ -1,0 +1,31 @@
+2023-05-10 00:01:04.482 [DEBU] {007c248afe845d174198714a3a4347a9} [  1 ms] [default] [shop] [rows:0  ] [txid:1] BEGIN
+2023-05-10 00:01:04.486 [DEBU] {007c248afe845d174198714a3a4347a9} [  3 ms] [default] [shop] [rows:0  ] [txid:1] UPDATE `position_info` SET `pic_url`='ffdgfgf',`link`='fgfgfg',`updated_at`='2023-05-10 00:01:04',`sort`=0,`goods_name`='cccccc' WHERE (`id`=2) AND `deleted_at` IS NULL
+2023-05-10 00:01:04.486 [DEBU] {007c248afe845d174198714a3a4347a9} [  0 ms] [default] [shop] [rows:0  ] [txid:1] COMMIT
+2023-05-10 00:01:34.911 [DEBU] {b837d59f05855d174298714a7ae8d6fb} [  2 ms] [default] [shop] [rows:0  ] [txid:2] BEGIN
+2023-05-10 00:01:34.913 [DEBU] {b837d59f05855d174298714a7ae8d6fb} [  1 ms] [default] [shop] [rows:1  ] [txid:2] UPDATE `position_info` SET `link`='fgfgfg',`sort`=0,`goods_name`='cccccc',`pic_url`='ffdgfgf',`updated_at`='2023-05-10 00:01:34' WHERE (`id`=3) AND `deleted_at` IS NULL
+2023-05-10 00:01:34.915 [DEBU] {b837d59f05855d174298714a7ae8d6fb} [  2 ms] [default] [shop] [rows:0  ] [txid:2] COMMIT
+2023-05-10 00:02:07.648 [DEBU] {f813213f0d855d174398714ace78ba49} [  1 ms] [default] [shop] [rows:0  ] [txid:3] BEGIN
+2023-05-10 00:02:07.650 [DEBU] {f813213f0d855d174398714ace78ba49} [  1 ms] [default] [shop] [rows:0  ] [txid:3] UPDATE `position_info` SET `sort`=0,`goods_name`='cccccc',`pic_url`='ffdgfgf',`updated_at`='2023-05-10 00:02:07',`link`='fgfgfg' WHERE (`id`=2) AND `deleted_at` IS NULL
+2023-05-10 00:02:07.651 [DEBU] {f813213f0d855d174398714ace78ba49} [  1 ms] [default] [shop] [rows:0  ] [txid:3] COMMIT
+2023-05-10 00:02:08.812 [DEBU] {f87790840d855d174498714ac9d928d2} [  0 ms] [default] [shop] [rows:0  ] [txid:4] BEGIN
+2023-05-10 00:02:08.814 [DEBU] {f87790840d855d174498714ac9d928d2} [  0 ms] [default] [shop] [rows:0  ] [txid:4] UPDATE `position_info` SET `goods_name`='cccccc',`pic_url`='ffdgfgf',`updated_at`='2023-05-10 00:02:08',`link`='fgfgfg',`sort`=0 WHERE (`id`=2) AND `deleted_at` IS NULL
+2023-05-10 00:02:08.814 [DEBU] {f87790840d855d174498714ac9d928d2} [  0 ms] [default] [shop] [rows:0  ] [txid:4] COMMIT
+2023-05-10 00:02:46.983 [DEBU] {a82eb66716855d174598714ac53a91b5} [  1 ms] [default] [shop] [rows:0  ] [txid:5] BEGIN
+2023-05-10 00:02:46.984 [DEBU] {a82eb66716855d174598714ac53a91b5} [  1 ms] [default] [shop] [rows:1  ] [txid:5] UPDATE `position_info` SET `updated_at`='2023-05-10 00:02:46',`pic_url`='ffdgfgf',`goods_name`='cccccc',`link`='fgfgfg',`sort`=0 WHERE (`id`=4) AND `deleted_at` IS NULL
+2023-05-10 00:02:46.985 [DEBU] {a82eb66716855d174598714ac53a91b5} [  1 ms] [default] [shop] [rows:0  ] [txid:5] COMMIT
+2023-05-10 00:04:05.026 [DEBU] {0046689328855d174798714a321e5264} [  1 ms] [default] [shop] [rows:2  ] SELECT `id`,`pic_url`,`goods_name`,`link`,`sort`,`goods_id`,`created_at`,`updated_at`,`deleted_at` FROM `position_info` WHERE `deleted_at` IS NULL ORDER BY `id` DESC LIMIT 0,10
+2023-05-10 00:04:05.029 [DEBU] {0046689328855d174798714a321e5264} [  2 ms] [default] [shop] [rows:1  ] SELECT COUNT(1) FROM `position_info` WHERE `deleted_at` IS NULL
+2023-05-10 00:04:05.030 [DEBU] {0046689328855d174798714a321e5264} [  1 ms] [default] [shop] [rows:2  ] SELECT `id`,`pic_url`,`link`,`sort`,`goods_name`,`created_at`,`updated_at` FROM `position_info` WHERE `deleted_at` IS NULL ORDER BY `id` DESC LIMIT 0,10
+2023-05-10 00:05:03.573 [DEBU] {d834243536855d174b98714ad2052769} [  1 ms] [default] [shop] [rows:0  ] [txid:6] BEGIN
+2023-05-10 00:05:03.575 [DEBU] {d834243536855d174b98714ad2052769} [  1 ms] [default] [shop] [rows:0  ] [txid:6] DELETE FROM `position_info` WHERE `id`=1
+2023-05-10 00:05:03.575 [DEBU] {d834243536855d174b98714ad2052769} [  0 ms] [default] [shop] [rows:0  ] [txid:6] COMMIT
+2023-05-10 00:05:22.496 [DEBU] {a0af069d3a855d174c98714a2aed45e2} [  1 ms] [default] [shop] [rows:0  ] [txid:7] BEGIN
+2023-05-10 00:05:22.497 [DEBU] {a0af069d3a855d174c98714a2aed45e2} [  1 ms] [default] [shop] [rows:1  ] [txid:7] DELETE FROM `position_info` WHERE `id`=3
+2023-05-10 00:05:22.499 [DEBU] {a0af069d3a855d174c98714a2aed45e2} [  2 ms] [default] [shop] [rows:0  ] [txid:7] COMMIT
+2023-05-10 00:05:40.248 [DEBU] {e00419bf3e855d174d98714af15423a8} [  1 ms] [default] [shop] [rows:0  ] [txid:8] BEGIN
+2023-05-10 00:05:40.249 [DEBU] {e00419bf3e855d174d98714af15423a8} [  1 ms] [default] [shop] [rows:1  ] [txid:8] DELETE FROM `position_info` WHERE `id`=2
+2023-05-10 00:05:40.250 [DEBU] {e00419bf3e855d174d98714af15423a8} [  1 ms] [default] [shop] [rows:0  ] [txid:8] COMMIT
+2023-05-10 00:07:03.503 [DEBU] {30d6542152855d175298714a9d140332} [  3 ms] [default] [shop] [rows:1  ] INSERT INTO `position_info`(`sort`,`goods_name`,`created_at`,`updated_at`,`pic_url`,`link`) VALUES(0,'shui','2023-05-10 00:07:03','2023-05-10 00:07:03','1111','fdxcxc') 
+2023-05-10 00:07:04.306 [DEBU] {70dc475152855d175398714a18fd4e10} [  2 ms] [default] [shop] [rows:1  ] INSERT INTO `position_info`(`pic_url`,`created_at`,`link`,`sort`,`updated_at`,`goods_name`) VALUES('1111','2023-05-10 00:07:04','fdxcxc',0,'2023-05-10 00:07:04','shui') 
+2023-05-10 00:07:04.917 [DEBU] {c0b9b97552855d175498714a9c6b772b} [  2 ms] [default] [shop] [rows:1  ] INSERT INTO `position_info`(`link`,`sort`,`goods_name`,`created_at`,`updated_at`,`pic_url`) VALUES('fdxcxc',0,'shui','2023-05-10 00:07:04','2023-05-10 00:07:04','1111') 
+2023-05-10 00:07:05.359 [DEBU] {b802139052855d175598714a29c160f9} [  2 ms] [default] [shop] [rows:1  ] INSERT INTO `position_info`(`goods_name`,`created_at`,`updated_at`,`link`,`pic_url`,`sort`) VALUES('shui','2023-05-10 00:07:05','2023-05-10 00:07:05','fdxcxc','1111',0) 

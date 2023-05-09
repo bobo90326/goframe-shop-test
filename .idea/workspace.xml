@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0590bd0-4a2f-4af9-9337-f588dca60a16" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/backend/position.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/controller/position.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/logic/position/position.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/model/position.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goframe-shop-test" beforeDir="false" afterPath="$PROJECT_DIR$/goframe-shop-test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/cmd/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/cmd/cmd.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/logic/logic.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/logic/logic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/logs/sql/2023-04-18.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/logs/sql/2023-04-30.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/logs/sql/2023-05-01.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/logs/sql/2023-05-02.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +54,7 @@
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/mac/goframe-shop-test/api",
+    "last_opened_file_path": "/Users/mac/goframe-shop-test/internal/model",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "settings.editor.selected.configurable": "database.sql.templating"
@@ -53,6 +62,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/internal/model" />
       <recent name="$PROJECT_DIR$/api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
