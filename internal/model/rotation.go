@@ -51,9 +51,9 @@ type RotationListOutputItem struct {
 	UpdatedAt *gtime.Time `json:"updated_at"` // 修改时间
 }
 
-type ContentSearchOutputItem struct {
-	RotationListOutputItem
-}
+//type ContentSearchOutputItem struct {
+//	RotationListOutputItem
+//}
 
 // RotationListItem 主要用于列表展示
 type RotationListItem struct {

@@ -1,0 +1,227 @@
+2023-05-11 01:00:36.588 [DEBU] {10f437cdd2d65d17b2b81434b568df11} [  5 ms] [default] [shop] [rows:9  ] SHOW FULL COLUMNS FROM `position_info`
+2023-05-11 01:00:36.602 [DEBU] {10f437cdd2d65d17b2b81434b568df11} [ 12 ms] [default] [shop] [rows:1  ] INSERT INTO `position_info`(`link`,`sort`,`goods_name`,`created_at`,`updated_at`,`pic_url`) VALUES('fdxcxc',0,'shui','2023-05-11 01:00:36','2023-05-11 01:00:36','1111') 
+2023-05-11 01:04:49.002 [DEBU] {004e4d920dd75d17992c7e074aa463a8} [  4 ms] [default] [shop] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-05-11 01:04:49.009 [DEBU] {004e4d920dd75d17992c7e074aa463a8} [  6 ms] [default] [shop] [rows:1  ] INSERT INTO `admin_info`(`created_at`,`name`,`password`,`role_ids`,`user_salt`,`is_admin`,`updated_at`) VALUES('2023-05-11 01:04:48','lisi','7a17b702e18b94c87041e69b452d36da','2','EjBZAMt9Zr',1,'2023-05-11 01:04:48') 
+2023-05-11 01:07:28.367 [DEBU] {688e7dad32d75d179a2c7e0786b9dccb} [  1 ms] [default] [shop] [rows:0  ] [txid:1] BEGIN
+2023-05-11 01:07:28.371 [DEBU] {688e7dad32d75d179a2c7e0786b9dccb} [  3 ms] [default] [shop] [rows:1  ] [txid:1] UPDATE `admin_info` SET `updated_at`='2023-05-11 01:07:28',`password`='8ec5ad38f1ce622b6ac31ed0c9a06470',`role_ids`='2',`user_salt`='QIjbkNLEr3',`is_admin`=1,`name`='wwwwww' WHERE `id`=16
+2023-05-11 01:07:28.374 [DEBU] {688e7dad32d75d179a2c7e0786b9dccb} [  3 ms] [default] [shop] [rows:0  ] [txid:1] COMMIT
+2023-05-11 01:07:46.126 [DEBU] {d07d0ed036d75d179b2c7e0790a80956} [  0 ms] [default] [shop] [rows:0  ] [txid:2] BEGIN
+2023-05-11 01:07:46.130 [ERRO] {d07d0ed036d75d179b2c7e0790a80956} [  3 ms] [default] [shop] [rows:0  ] [txid:2] UPDATE `admin_info` SET `updated_at`='2023-05-11 01:07:46',`is_admin`=1777,`name`='wwwwww',`password`='af2a891acd5d0577ea9ad9b3cce4cbc2',`role_ids`='255',`user_salt`='MeG7e9DHYL' WHERE `id`=16
+Error: Error 1264: Out of range value for column 'is_admin' at row 1
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_core.go:671
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_core_underlying.go:279
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_core_underlying.go:136
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoUpdate
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_core.go:608
+5.  github.com/gogf/gf/v2/database/gdb.(*HookUpdateInput).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_model_hook.go:138
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).Update
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_model_update.go:111
+7.  goframe-shop-test/internal/logic/admin.(*sAdmin).Update.func1
+    /Users/mac/goframe-shop-test/internal/logic/admin/admin.go:72
+8.  github.com/gogf/gf/v2/database/gdb.(*Core).Transaction
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_core_transaction.go:108
+9.  github.com/gogf/gf/v2/database/gdb.(*Model).Transaction
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_model_transaction.go:27
+10. goframe-shop-test/internal/dao/internal.(*AdminInfoDao).Transaction
+    /Users/mac/goframe-shop-test/internal/dao/internal/admin_info.go:86
+11. goframe-shop-test/internal/logic/admin.(*sAdmin).Update
+    /Users/mac/goframe-shop-test/internal/logic/admin/admin.go:57
+12. goframe-shop-test/internal/controller.(*cAdmin).Update
+    /Users/mac/goframe-shop-test/internal/controller/admin.go:38
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:152
+14. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_func.go:55
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:129
+16. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:75
+17. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/util/gutil/gutil.go:56
+18. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:49
+19. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_middleware_handler_response.go:25
+20. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:55
+21. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_func.go:55
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:54
+23. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/util/gutil/gutil.go:56
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:49
+25. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_middleware_tracing.go:78
+26. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:96
+27. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_func.go:55
+28. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:95
+29. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/util/gutil/gutil.go:56
+30. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:49
+31. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_server_handler.go:132
+
+2023-05-11 01:07:46.132 [DEBU] {d07d0ed036d75d179b2c7e0790a80956} [  0 ms] [default] [shop] [rows:0  ] [txid:2] ROLLBACK
+2023-05-11 01:08:48.619 [DEBU] {40fed75c45d75d179c2c7e077e876c0b} [  2 ms] [default] [shop] [rows:0  ] [txid:3] BEGIN
+2023-05-11 01:08:48.623 [ERRO] {40fed75c45d75d179c2c7e077e876c0b} [  1 ms] [default] [shop] [rows:0  ] [txid:3] UPDATE `admin_info` SET `user_salt`='hUtRRj2zvv',`is_admin`=1777,`name`='wwwwww',`updated_at`='2023-05-11 01:08:48',`role_ids`='255',`password`='41e81420acbc100ef6bfe4d0c2efb14e' WHERE `id`=16
+Error: Error 1264: Out of range value for column 'is_admin' at row 1
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_core.go:671
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_core_underlying.go:279
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_core_underlying.go:136
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoUpdate
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_core.go:608
+5.  github.com/gogf/gf/v2/database/gdb.(*HookUpdateInput).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_model_hook.go:138
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).Update
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_model_update.go:111
+7.  goframe-shop-test/internal/logic/admin.(*sAdmin).Update.func1
+    /Users/mac/goframe-shop-test/internal/logic/admin/admin.go:72
+8.  github.com/gogf/gf/v2/database/gdb.(*Core).Transaction
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_core_transaction.go:108
+9.  github.com/gogf/gf/v2/database/gdb.(*Model).Transaction
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_model_transaction.go:27
+10. goframe-shop-test/internal/dao/internal.(*AdminInfoDao).Transaction
+    /Users/mac/goframe-shop-test/internal/dao/internal/admin_info.go:86
+11. goframe-shop-test/internal/logic/admin.(*sAdmin).Update
+    /Users/mac/goframe-shop-test/internal/logic/admin/admin.go:57
+12. goframe-shop-test/internal/controller.(*cAdmin).Update
+    /Users/mac/goframe-shop-test/internal/controller/admin.go:38
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:152
+14. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_func.go:55
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:129
+16. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:75
+17. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/util/gutil/gutil.go:56
+18. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:49
+19. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_middleware_handler_response.go:25
+20. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:55
+21. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_func.go:55
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:54
+23. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/util/gutil/gutil.go:56
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:49
+25. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_middleware_tracing.go:78
+26. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:96
+27. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_func.go:55
+28. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:95
+29. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/util/gutil/gutil.go:56
+30. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:49
+31. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_server_handler.go:132
+
+2023-05-11 01:08:48.625 [DEBU] {40fed75c45d75d179c2c7e077e876c0b} [  0 ms] [default] [shop] [rows:0  ] [txid:3] ROLLBACK
+2023-05-11 01:09:09.011 [DEBU] {88e96c1c4ad75d179d2c7e07d9b9fdc9} [  0 ms] [default] [shop] [rows:0  ] [txid:4] BEGIN
+2023-05-11 01:09:09.013 [ERRO] {88e96c1c4ad75d179d2c7e07d9b9fdc9} [  0 ms] [default] [shop] [rows:0  ] [txid:4] UPDATE `admin_info` SET `is_admin`=1777,`updated_at`='2023-05-11 01:09:09',`name`='wangwu',`password`='e50c2d0f7b9dff80bd2823f8921527e5',`role_ids`='255',`user_salt`='kIXj2sBz1n' WHERE `id`=16
+Error: Error 1264: Out of range value for column 'is_admin' at row 1
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_core.go:671
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_core_underlying.go:279
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_core_underlying.go:136
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoUpdate
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_core.go:608
+5.  github.com/gogf/gf/v2/database/gdb.(*HookUpdateInput).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_model_hook.go:138
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).Update
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_model_update.go:111
+7.  goframe-shop-test/internal/logic/admin.(*sAdmin).Update.func1
+    /Users/mac/goframe-shop-test/internal/logic/admin/admin.go:72
+8.  github.com/gogf/gf/v2/database/gdb.(*Core).Transaction
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_core_transaction.go:108
+9.  github.com/gogf/gf/v2/database/gdb.(*Model).Transaction
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/database/gdb/gdb_model_transaction.go:27
+10. goframe-shop-test/internal/dao/internal.(*AdminInfoDao).Transaction
+    /Users/mac/goframe-shop-test/internal/dao/internal/admin_info.go:86
+11. goframe-shop-test/internal/logic/admin.(*sAdmin).Update
+    /Users/mac/goframe-shop-test/internal/logic/admin/admin.go:57
+12. goframe-shop-test/internal/controller.(*cAdmin).Update
+    /Users/mac/goframe-shop-test/internal/controller/admin.go:38
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:152
+14. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_func.go:55
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:129
+16. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:75
+17. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/util/gutil/gutil.go:56
+18. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:49
+19. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_middleware_handler_response.go:25
+20. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:55
+21. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_func.go:55
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:54
+23. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/util/gutil/gutil.go:56
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:49
+25. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_middleware_tracing.go:78
+26. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:96
+27. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_func.go:55
+28. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:95
+29. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/util/gutil/gutil.go:56
+30. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_request_middleware.go:49
+31. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.3.3/net/ghttp/ghttp_server_handler.go:132
+
+2023-05-11 01:09:09.015 [DEBU] {88e96c1c4ad75d179d2c7e07d9b9fdc9} [  0 ms] [default] [shop] [rows:0  ] [txid:4] ROLLBACK
+2023-05-11 01:09:29.096 [DEBU] {00e05bc94ed75d179e2c7e071fb604b8} [  3 ms] [default] [shop] [rows:1  ] INSERT INTO `admin_info`(`is_admin`,`name`,`password`,`role_ids`,`user_salt`,`updated_at`,`created_at`) VALUES(1,'lisi','7157d53ec2722957014a54b4e59f5af0','2','iE7nntX0bY','2023-05-11 01:09:29','2023-05-11 01:09:29') 
+2023-05-11 01:10:06.423 [DEBU] {b8b7537a57d75d179f2c7e07fe21988e} [  2 ms] [default] [shop] [rows:0  ] [txid:5] BEGIN
+2023-05-11 01:10:06.426 [DEBU] {b8b7537a57d75d179f2c7e07fe21988e} [  2 ms] [default] [shop] [rows:1  ] [txid:5] UPDATE `admin_info` SET `name`='wangwu',`updated_at`='2023-05-11 01:10:06',`password`='0d4f87d75dafa4e91e17ecb0ac936acc',`role_ids`='2',`user_salt`='3aI6YVMS4e',`is_admin`=0 WHERE `id`=16
+2023-05-11 01:10:06.427 [DEBU] {b8b7537a57d75d179f2c7e07fe21988e} [  1 ms] [default] [shop] [rows:0  ] [txid:5] COMMIT
+2023-05-11 01:10:50.972 [DEBU] {983fa0d961d75d17a02c7e07688026d1} [  2 ms] [default] [shop] [rows:0  ] [txid:6] BEGIN
+2023-05-11 01:10:50.974 [DEBU] {983fa0d961d75d17a02c7e07688026d1} [  2 ms] [default] [shop] [rows:1  ] [txid:6] UPDATE `admin_info` SET `updated_at`='2023-05-11 01:10:50',`name`='sssss',`password`='6d412f73b34b951d49c27abc45125219',`role_ids`='2',`user_salt`='cicrj5uEXU',`is_admin`=1 WHERE `id`=17
+2023-05-11 01:10:50.976 [DEBU] {983fa0d961d75d17a02c7e07688026d1} [  1 ms] [default] [shop] [rows:0  ] [txid:6] COMMIT
+2023-05-11 01:13:21.318 [DEBU] {c03ffeda84d75d17a32c7e075ddfd1bc} [  1 ms] [default] [shop] [rows:0  ] [txid:7] BEGIN
+2023-05-11 01:13:21.321 [DEBU] {c03ffeda84d75d17a32c7e075ddfd1bc} [  2 ms] [default] [shop] [rows:1  ] [txid:7] DELETE FROM `admin_info` WHERE `id`=17
+2023-05-11 01:13:21.322 [DEBU] {c03ffeda84d75d17a32c7e075ddfd1bc} [  1 ms] [default] [shop] [rows:0  ] [txid:7] COMMIT
+2023-05-11 01:13:39.989 [DEBU] {c87ee13389d75d17a52c7e07541e3c7a} [  1 ms] [default] [shop] [rows:5  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` ORDER BY `id` DESC LIMIT 0,10
+2023-05-11 01:13:39.992 [DEBU] {c87ee13389d75d17a52c7e07541e3c7a} [  2 ms] [default] [shop] [rows:1  ] SELECT COUNT(1) FROM `admin_info`
+2023-05-11 01:13:39.993 [DEBU] {c87ee13389d75d17a52c7e07541e3c7a} [  1 ms] [default] [shop] [rows:5  ] SELECT `id`,`name`,`role_ids`,`is_admin`,`created_at`,`updated_at` FROM `admin_info` ORDER BY `id` DESC LIMIT 0,10
+2023-05-11 01:15:58.968 [DEBU] {50b34e8fa9d75d1794f9a80d91246cbd} [  5 ms] [default] [shop] [rows:9  ] SHOW FULL COLUMNS FROM `position_info`
+2023-05-11 01:15:58.970 [DEBU] {50b34e8fa9d75d1794f9a80d91246cbd} [  2 ms] [default] [shop] [rows:1  ] INSERT INTO `position_info`(`link`,`sort`,`created_at`,`pic_url`,`updated_at`,`goods_name`) VALUES('fdxcxc',0,'2023-05-11 01:15:58','1111','2023-05-11 01:15:58','shui') 
+2023-05-11 01:16:21.900 [DEBU] {308379e6aed75d1795f9a80dc8ebd94a} [  2 ms] [default] [shop] [rows:1  ] INSERT INTO `position_info`(`created_at`,`updated_at`,`link`,`sort`,`goods_name`,`pic_url`) VALUES('2023-05-11 01:16:21','2023-05-11 01:16:21','fdxcxc',0,'shui','1111') 

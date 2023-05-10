@@ -22,6 +22,7 @@ var (
 					controller.Hello,    //示例
 					controller.Rotation, //轮播图
 					controller.Position, //手工位
+					controller.Admin,
 				)
 			})
 			s.Run()
