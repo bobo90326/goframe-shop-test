@@ -6,6 +6,10 @@ package logic
 
 import (
 	_ "goframe-shop-test/internal/logic/admin"
+	_ "goframe-shop-test/internal/logic/bizctx"
+	_ "goframe-shop-test/internal/logic/login"
+	_ "goframe-shop-test/internal/logic/middleware"
 	_ "goframe-shop-test/internal/logic/position"
 	_ "goframe-shop-test/internal/logic/rotation"
+	_ "goframe-shop-test/internal/logic/session"
 )
