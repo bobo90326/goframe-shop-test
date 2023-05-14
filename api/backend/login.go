@@ -1,6 +1,9 @@
 package backend
 
-import "github.com/gogf/gf/v2/frame/g"
+import (
+	"github.com/gogf/gf/v2/frame/g"
+	"time"
+)
 
 type LoginDoReq struct {
 	g.Meta   `path:"/backend/login" method:"post" summary:"执行登录请求" tags:"登录"`
@@ -9,5 +12,23 @@ type LoginDoReq struct {
 	//Captcha  string `json:"captcha"  v:"required#请输入验证码" dc:"验证码"`
 }
 type LoginDoRes struct {
-	Info interface{} `json:"info"`
+	//Info interface{} `json:"info"`
+	Token  string    `json:"token"`
+	Expire time.Time `json:"expire"`
+}
+
+type RefreshTokenReq struct {
+	g.Meta `path:"/backend/refresh_token" method:"post"`
+}
+
+type RefreshTokenRes struct {
+	Token  string    `json:"token"`
+	Expire time.Time `json:"expire"`
+}
+
+type LogoutReq struct {
+	g.Meta `path:"/backend/logout" method:"post"`
+}
+
+type LogoutRes struct {
 }

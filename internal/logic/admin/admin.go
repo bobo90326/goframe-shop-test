@@ -106,3 +106,21 @@ func (s *sAdmin) GetList(ctx context.Context, in model.AdminGetListInput) (out *
 
 	return
 }
+
+func (s *sAdmin) GetAdminByNamePassword(ctx context.Context, in model.UserLoginInput) map[string]interface{} {
+	adminInfo := entity.AdminInfo{}
+	err := dao.AdminInfo.Ctx(ctx).Where("name", in.Name).Scan(&adminInfo)
+	if err != nil {
+		return nil
+	}
+	if utility.EncryptPassword(in.Password, adminInfo.UserSalt) != adminInfo.Password {
+		return nil
+	} else {
+		return g.Map{
+			"id":   adminInfo.Id,
+			"name": adminInfo.Name,
+		}
+	}
+
+	return nil
+}

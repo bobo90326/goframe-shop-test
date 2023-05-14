@@ -27,9 +27,19 @@ var (
 					controller.Hello,    //示例
 					controller.Rotation, //轮播图
 					controller.Position, //手工位
-					controller.Admin,
+					controller.Admin.Create,
+					controller.Admin.Delete,
+					controller.Admin.Update,
+					controller.Admin.List,
+
 					controller.Login,
 				)
+				group.Group("/", func(group *ghttp.RouterGroup) {
+					group.Middleware(service.Middleware().Auth)
+					group.ALLMap(g.Map{
+						"/backend/admin/info": controller.Admin.Info,
+					})
+				})
 			})
 			s.Run()
 			return nil
