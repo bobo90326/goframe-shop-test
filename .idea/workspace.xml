@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0590bd0-4a2f-4af9-9337-f588dca60a16" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/api/frontend/api.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/frontend/rotation.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/backend/admin.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/backend/admin.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/backend/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/backend/login.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/goframe-shop-test" beforeDir="false" afterPath="$PROJECT_DIR$/goframe-shop-test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/cmd/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/cmd/cmd.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/controller/admin.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/controller/admin.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/controller/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/controller/login.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/logic/admin/admin.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/logic/admin/admin.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/logic/middleware/middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/logic/middleware/middleware.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/service/admin.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/admin.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/service/middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/middleware.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/controller/rotation.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/controller/rotation.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +49,7 @@
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/mac/goframe-shop-test/internal/service",
+    "last_opened_file_path": "/Users/mac/goframe-shop-test/api/frontend",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "settings.editor.selected.configurable": "database.sql.templating"
@@ -65,11 +57,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api/frontend" />
       <recent name="$PROJECT_DIR$/internal/service" />
       <recent name="$PROJECT_DIR$/utility" />
       <recent name="$PROJECT_DIR$/internal/logic" />
       <recent name="$PROJECT_DIR$/internal/controller" />
-      <recent name="$PROJECT_DIR$/internal/consts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/api/backend" />

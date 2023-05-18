@@ -3,6 +3,7 @@ package controller
 import (
 	"context"
 	"goframe-shop-test/api/backend"
+	"goframe-shop-test/api/frontend"
 	"goframe-shop-test/internal/model"
 	"goframe-shop-test/internal/service"
 )
@@ -58,4 +59,18 @@ func (a *cRotation) List(ctx context.Context, req *backend.RotationGetListCommon
 	}
 
 	return &backend.RotationGetListCommonRes{List: getListRes.List, Page: getListRes.Page, Size: getListRes.Size, Total: getListRes.Total}, nil
+}
+
+// Index article list
+func (a *cRotation) ListFrontend(ctx context.Context, req *frontend.RotationGetListCommonReq) (res *frontend.RotationGetListCommonRes, err error) {
+	getListRes, err := service.Rotation().GetList(ctx, model.RotationGetListInput{
+		Page: req.Page,
+		Size: req.Size,
+		Sort: req.Sort,
+	})
+	if err != nil {
+		return nil, err
+	}
+
+	return &frontend.RotationGetListCommonRes{List: getListRes.List, Page: getListRes.Page, Size: getListRes.Size, Total: getListRes.Total}, nil
 }

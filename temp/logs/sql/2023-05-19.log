@@ -1,0 +1,4 @@
+2023-05-19 00:10:06.180 [DEBU] {c09e79c5b5486017d72cef71afe0ab57} [  3 ms] [default] [shop] [rows:7  ] SHOW FULL COLUMNS FROM `rotation_info`
+2023-05-19 00:10:06.190 [DEBU] {c09e79c5b5486017d72cef71afe0ab57} [  8 ms] [default] [shop] [rows:10 ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at`,`deleted_at` FROM `rotation_info` WHERE `deleted_at` IS NULL ORDER BY `id` DESC LIMIT 0,10
+2023-05-19 00:10:06.192 [DEBU] {c09e79c5b5486017d72cef71afe0ab57} [  2 ms] [default] [shop] [rows:1  ] SELECT COUNT(1) FROM `rotation_info` WHERE `deleted_at` IS NULL
+2023-05-19 00:10:06.193 [DEBU] {c09e79c5b5486017d72cef71afe0ab57} [  0 ms] [default] [shop] [rows:10 ] SELECT `id`,`pic_url`,`link`,`sort`,`created_at`,`updated_at` FROM `rotation_info` WHERE `deleted_at` IS NULL ORDER BY `id` DESC LIMIT 0,10
