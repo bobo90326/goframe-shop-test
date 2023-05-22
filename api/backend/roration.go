@@ -36,7 +36,6 @@ type RotationGetListCommonReq struct {
 }
 type RotationGetListCommonRes struct {
 	//todo
-	//g.Meta `mime:"text/html" type:"string" example:"<html/>"`
 	List  interface{} `json:"list" description:"列表"`
 	Page  int         `json:"page" description:"分页码"`
 	Size  int         `json:"size" description:"分页数量"`
