@@ -24,6 +24,8 @@ github.com/go-redis/redis/v8 v8.11.4/go.mod h1:2Z2wHZXdQpCDXEGzqMockDpNyYvi2l4Px
 github.com/go-sql-driver/mysql v1.6.0 h1:BCTh4TKNUYmOmMUcQ3IipzF5prigylS7XXjEkfCHuOE=
 github.com/go-sql-driver/mysql v1.6.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/go-task/slim-sprig v0.0.0-20210107165309-348f09dbbbc0/go.mod h1:fyg7847qk6SyHyPtNmDHnmrv/HOrqktSC+C9fM+CJOE=
+github.com/goflyfox/gtoken v1.5.8 h1:y2+zoCbXj5/pvyiyJ1Z1aVyAB3j+HOZIFiBSgsOylec=
+github.com/goflyfox/gtoken v1.5.8/go.mod h1:M7Wst5mwPtjnAASfl3556U3bRWlSzK0/29KeIW1QnZM=
 github.com/gogf/gf-jwt/v2 v2.0.1 h1:Sr6QLBbbTih7+IDfR4rK8REoWodi60hFaaO1gs7uzm8=
 github.com/gogf/gf-jwt/v2 v2.0.1/go.mod h1:AGEJOkG64G8ZYOi50ObYgJ+D7L3W4GcTW65m6VVGbmI=
 github.com/gogf/gf/contrib/drivers/mysql/v2 v2.3.3 h1:McqosVS9Bm7SzmsMTwfVT0YX6i/Is2aRn/XfqW/0iSI=
