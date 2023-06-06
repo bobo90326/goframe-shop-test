@@ -2,6 +2,7 @@ package backend
 
 import (
 	"github.com/gogf/gf/v2/frame/g"
+	"goframe-shop-test/internal/model/entity"
 	"time"
 )
 
@@ -15,6 +16,15 @@ type LoginDoRes struct {
 	//Info interface{} `json:"info"`
 	Token  string    `json:"token"`
 	Expire time.Time `json:"expire"`
+}
+
+type LoginRes struct {
+	Type        string                  `json:"type"`
+	Token       string                  `json:"token"`
+	ExpireIn    int                     `json:"expire_in"`
+	IsAdmin     int                     `json:"is_admin"`
+	RoleIds     string                  `json:"role_ids"`
+	Permissions []entity.PermissionInfo `json:"permissions"`
 }
 
 type RefreshTokenReq struct {

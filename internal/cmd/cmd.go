@@ -2,14 +2,19 @@ package cmd
 
 import (
 	"context"
-	"github.com/goflyfox/gtoken/gtoken"
+	"github.com/gogf/gf/v2/text/gstr"
+	"github.com/gogf/gf/v2/util/gconv"
+	"goframe-shop-test/api/backend"
 	"goframe-shop-test/internal/consts"
 	"goframe-shop-test/internal/controller"
 	"goframe-shop-test/internal/dao"
 	"goframe-shop-test/internal/model/entity"
 	"goframe-shop-test/internal/service"
 	"goframe-shop-test/utility"
+	"goframe-shop-test/utility/response"
 	"strconv"
+
+	"github.com/goflyfox/gtoken/gtoken"
 
 	"github.com/gogf/gf/v2/frame/g"
 	"github.com/gogf/gf/v2/net/ghttp"
@@ -29,11 +34,13 @@ var (
 			gfToken := &gtoken.GfToken{
 				ServerName:       "shop ",
 				LoginPath:        "/backend/login",
-				LoginBeforeFunc:  LoginFunc,
-				LoginAfterFunc:   LoginAfterFunc,
+				LoginBeforeFunc:  loginFunc,
+				LoginAfterFunc:   loginAfterFunc,
 				LogoutPath:       "/backend/user/logout",
+				AuthPaths:        g.SliceStr{"/backend/admin/info"},
 				AuthExcludePaths: g.SliceStr{"/user/info", "/system/user/info"}, // 不拦截路径 /user/info,/system/user/info,/system/user,
 				MultiLogin:       true,
+				AuthAfterFunc:    authAfterFunc,
 			}
 
 			s.Group("/", func(group *ghttp.RouterGroup) {
@@ -71,7 +78,7 @@ var (
 	}
 )
 
-func LoginFunc(r *ghttp.Request) (string, interface{}) {
+func loginFunc(r *ghttp.Request) (string, interface{}) {
 	name := r.Get("name").String()
 	password := r.Get("password").String()
 	ctx := context.TODO()
@@ -93,7 +100,7 @@ func LoginFunc(r *ghttp.Request) (string, interface{}) {
 	return consts.GtokenAdminPrefix + strconv.Itoa(adminInfo.Id), adminInfo
 }
 
-func LoginAfterFunc(r *ghttp.Request, respData gtoken.Resp) {
+func loginAfterFunc(r *ghttp.Request, respData gtoken.Resp) {
 	g.Dump("respData:", respData)
 	if !respData.Success() {
 		respData.Code = 0
@@ -101,7 +108,9 @@ func LoginAfterFunc(r *ghttp.Request, respData gtoken.Resp) {
 		return
 	} else {
 		respData.Code = 1
-		adminId := respData.GetString("userKey")
+		userKey := respData.GetString("userKey")
+		adminId := gstr.StrEx(userKey, consts.GtokenAdminPrefix)
+		g.Dump("adminId", adminId)
 		adminInfo := entity.AdminInfo{}
 		err := dao.AdminInfo.Ctx(context.TODO()).WherePri(adminId).Scan(&adminInfo)
 		if err != nil {
@@ -110,8 +119,42 @@ func LoginAfterFunc(r *ghttp.Request, respData gtoken.Resp) {
 		var rolePermissionInfos []entity.RolePermissionInfo
 		err = dao.RolePermissionInfo.Ctx(context.TODO()).WhereIn(dao.RolePermissionInfo.Columns().RoleId, g.Slice{adminInfo.RoleIds}).Scan(&rolePermissionInfos)
 		if err != nil {
-
+			return
 		}
+		permissionIds := g.Slice{}
+		for _, info := range rolePermissionInfos {
+			permissionIds = append(permissionIds, info.PermissionId)
+		}
+		var permissions []entity.PermissionInfo
+		err = dao.PermissionInfo.Ctx(context.TODO()).WhereIn(dao.PermissionInfo.Columns().Id, permissionIds).Scan(&permissions)
+		if err != nil {
+			return
+		}
+		data := &backend.LoginRes{
+			Type:        "Bearer",
+			Token:       respData.GetString("token"),
+			ExpireIn:    10 * 24 * 60 * 60,
+			IsAdmin:     adminInfo.IsAdmin,
+			RoleIds:     adminInfo.RoleIds,
+			Permissions: permissions,
+		}
+		response.JsonExit(r, 0, "", data)
+	}
+}
+
+func authAfterFunc(r *ghttp.Request, data gtoken.Resp) {
+	var adminInfo entity.AdminInfo
+	var GToken *gtoken.GfToken
+	token := GToken.GetTokenData(r)
+	err := gconv.Struct(token.GetString("data"), &adminInfo)
+	if err != nil {
+		response.Auth(r)
+		return
+	}
+	if adminInfo.DeletedAt != nil {
+		response.AuthBlack(r)
+		return
 	}
 
+	//r.SetCtxVar(CtxAcco)
 }

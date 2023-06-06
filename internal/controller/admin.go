@@ -13,7 +13,7 @@ var Admin = cAdmin{}
 
 type cAdmin struct{}
 
-//新增
+// 新增
 func (a *cAdmin) Create(ctx context.Context, req *backend.AdminReq) (res *backend.AdminRes, err error) {
 	out, err := service.Admin().Create(ctx, model.AdminCreateInput{
 		AdminCreateUpdateBase: model.AdminCreateUpdateBase{
@@ -29,7 +29,7 @@ func (a *cAdmin) Create(ctx context.Context, req *backend.AdminReq) (res *backen
 	return &backend.AdminRes{AdminId: out.AdminId}, nil
 }
 
-//删除
+// 删除
 func (a *cAdmin) Delete(ctx context.Context, req *backend.AdminDeleteReq) (res *backend.AdminDeleteRes, err error) {
 	err = service.Admin().Delete(ctx, req.Id)
 	return
@@ -60,6 +60,15 @@ func (a *cAdmin) List(ctx context.Context, req *backend.AdminGetListCommonReq) (
 
 	return &backend.AdminGetListCommonRes{List: getListRes.List, Page: getListRes.Page, Size: getListRes.Size, Total: getListRes.Total}, nil
 }
+
+//for jwt
+//func (a *cAdmin) Info(ctx context.Context, req *backend.AdminGetInfoReq) (res *backend.AdminGetInfoRes, err error) {
+//	return &backend.AdminGetInfoRes{
+//		Id:          gconv.Int(service.Auth().GetIdentity(ctx)),
+//		IdentityKey: service.Auth().IdentityKey,
+//		Payload:     service.Auth().GetPayload(ctx),
+//	}, nil
+//}
 
 func (a *cAdmin) Info(ctx context.Context, req *backend.AdminGetInfoReq) (res *backend.AdminGetInfoRes, err error) {
 	return &backend.AdminGetInfoRes{
