@@ -4,6 +4,7 @@ import (
 	"context"
 	"github.com/gogf/gf/v2/util/gconv"
 	"goframe-shop-test/api/backend"
+	"goframe-shop-test/internal/consts"
 	"goframe-shop-test/internal/model"
 	"goframe-shop-test/internal/service"
 )
@@ -72,8 +73,9 @@ func (a *cAdmin) List(ctx context.Context, req *backend.AdminGetListCommonReq) (
 
 func (a *cAdmin) Info(ctx context.Context, req *backend.AdminGetInfoReq) (res *backend.AdminGetInfoRes, err error) {
 	return &backend.AdminGetInfoRes{
-		Id:          gconv.Int(service.Auth().GetIdentity(ctx)),
-		IdentityKey: service.Auth().IdentityKey,
-		Payload:     service.Auth().GetPayload(ctx),
+		Id:      gconv.Int(ctx.Value(consts.CtxAdminId)),
+		Name:    gconv.String(ctx.Value(consts.CtxAdminName)),
+		RoleIds: gconv.String(ctx.Value(consts.CtxAdminRoleIds)),
+		IsAdmin: gconv.Int(ctx.Value(consts.CtxAdminIsAdmin)),
 	}, nil
 }

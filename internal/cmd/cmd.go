@@ -33,6 +33,7 @@ var (
 			// 启动gtoken
 			gfToken := &gtoken.GfToken{
 				ServerName:       "shop ",
+				CacheMode:        2,
 				LoginPath:        "/backend/login",
 				LoginBeforeFunc:  loginFunc,
 				LoginAfterFunc:   loginAfterFunc,
@@ -142,11 +143,9 @@ func loginAfterFunc(r *ghttp.Request, respData gtoken.Resp) {
 	}
 }
 
-func authAfterFunc(r *ghttp.Request, data gtoken.Resp) {
+func authAfterFunc(r *ghttp.Request, respData gtoken.Resp) {
 	var adminInfo entity.AdminInfo
-	var GToken *gtoken.GfToken
-	token := GToken.GetTokenData(r)
-	err := gconv.Struct(token.GetString("data"), &adminInfo)
+	err := gconv.Struct(respData.GetString("data"), &adminInfo)
 	if err != nil {
 		response.Auth(r)
 		return
@@ -156,5 +155,9 @@ func authAfterFunc(r *ghttp.Request, data gtoken.Resp) {
 		return
 	}
 
-	//r.SetCtxVar(CtxAcco)
+	r.SetCtxVar(consts.CtxAdminId, adminInfo.Id)
+	r.SetCtxVar(consts.CtxAdminName, adminInfo.Name)
+	r.SetCtxVar(consts.CtxAdminIsAdmin, adminInfo.IsAdmin)
+	r.SetCtxVar(consts.CtxAdminRoleIds, adminInfo.RoleIds)
+	r.Middleware.Next()
 }
