@@ -65,6 +65,7 @@ var (
 					controller.Admin.List,
 					controller.Login,
 					controller.Data, //
+					controller.Role,
 				)
 				group.Group("/", func(group *ghttp.RouterGroup) {
 					//group.Middleware(service.Middleware().Auth)
