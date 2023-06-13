@@ -65,3 +65,7 @@ type AdminListItem struct {
 	CreatedAt *gtime.Time `json:"created_at"` // 创建时间
 	UpdatedAt *gtime.Time `json:"updated_at"` // 修改时间
 }
+
+type AdminSearchOutputItem struct {
+	AdminGetListOutputItem
+}
