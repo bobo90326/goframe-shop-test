@@ -1,39 +1,38 @@
-package admin
+package rotation
 
 import (
 	"context"
 	"github.com/gogf/gf/v2/database/gdb"
+	"github.com/gogf/gf/v2/encoding/ghtml"
 	"github.com/gogf/gf/v2/frame/g"
 	"github.com/gogf/gf/v2/util/grand"
+	"goframe-shop-test/internal/dao"
+	"goframe-shop-test/internal/model"
 	"goframe-shop-test/internal/model/entity"
 	"goframe-shop-test/internal/service"
 	"goframe-shop-test/utility"
-
-	"github.com/gogf/gf/v2/encoding/ghtml"
-	"goframe-shop-test/internal/dao"
-	"goframe-shop-test/internal/model"
 )
 
 type sAdmin struct{}
 
 func init() {
 	service.RegisterAdmin(New())
-
 }
 
 func New() *sAdmin {
 	return &sAdmin{}
 }
 
-// Create 创建内容
 func (s *sAdmin) Create(ctx context.Context, in model.AdminCreateInput) (out model.AdminCreateOutput, err error) {
 	// 不允许HTML代码
 	if err = ghtml.SpecialCharsMapOrStruct(in); err != nil {
 		return out, err
 	}
+	//处理加密盐和密码的逻辑
 	UserSalt := grand.S(10)
-	in.PassWord = utility.EncryptPassword(in.PassWord, UserSalt)
+	in.Password = utility.EncryptPassword(in.Password, UserSalt)
 	in.UserSalt = UserSalt
+	//插入数据返回id
 	lastInsertID, err := dao.AdminInfo.Ctx(ctx).Data(in).InsertAndGetId()
 	if err != nil {
 		return out, err
@@ -43,7 +42,7 @@ func (s *sAdmin) Create(ctx context.Context, in model.AdminCreateInput) (out mod
 
 // Delete 删除
 func (s *sAdmin) Delete(ctx context.Context, id uint) error {
-	return dao.AdminInfo.Transaction(ctx, func(ctx context.Context, tx gdb.TX) error {
+	return dao.AdminInfo.Transaction(ctx, func(ctx context.Context, tx *gdb.TX) error {
 		// 删除内容
 		_, err := dao.AdminInfo.Ctx(ctx).Where(g.Map{
 			dao.AdminInfo.Columns().Id: id,
@@ -54,16 +53,18 @@ func (s *sAdmin) Delete(ctx context.Context, id uint) error {
 
 // Update 修改
 func (s *sAdmin) Update(ctx context.Context, in model.AdminUpdateInput) error {
-	return dao.AdminInfo.Transaction(ctx, func(ctx context.Context, tx gdb.TX) error {
+	return dao.AdminInfo.Transaction(ctx, func(ctx context.Context, tx *gdb.TX) error {
 		// 不允许HTML代码
 		if err := ghtml.SpecialCharsMapOrStruct(in); err != nil {
 			return err
 		}
-		if in.PassWord != "" {
+		//判断是否修改了密码
+		if in.Password != "" {
 			UserSalt := grand.S(10)
-			in.PassWord = utility.EncryptPassword(in.PassWord, UserSalt)
+			in.Password = utility.EncryptPassword(in.Password, UserSalt)
 			in.UserSalt = UserSalt
 		}
+		//更新操作
 		_, err := dao.AdminInfo.
 			Ctx(ctx).
 			Data(in).
@@ -83,8 +84,9 @@ func (s *sAdmin) GetList(ctx context.Context, in model.AdminGetListInput) (out *
 		Page: in.Page,
 		Size: in.Size,
 	}
+
+	// 分配查询
 	listModel := m.Page(in.Page, in.Size)
-	listModel = listModel.OrderDesc(dao.AdminInfo.Columns().Id)
 
 	// 执行查询
 	var list []*entity.AdminInfo
@@ -99,15 +101,25 @@ func (s *sAdmin) GetList(ctx context.Context, in model.AdminGetListInput) (out *
 	if err != nil {
 		return out, err
 	}
-	// Admin todo
+	// Admin
+	//指定item的键名用：ScanList
+	//if err := listModel.ScanList(&out.List, "Admin"); err != nil {
+	//不指定item的键名用：Scan
 	if err := listModel.Scan(&out.List); err != nil {
 		return out, err
 	}
-
 	return
 }
 
 func (s *sAdmin) GetAdminByNamePassword(ctx context.Context, in model.UserLoginInput) map[string]interface{} {
+	//todo 对接DB
+	//if in.Name == "admin" && in.Password == "admin" {
+	//	return g.Map{
+	//		"id":       1,
+	//		"username": "admin",
+	//	}
+	//}
+	//验证账号密码是否正确
 	adminInfo := entity.AdminInfo{}
 	err := dao.AdminInfo.Ctx(ctx).Where("name", in.Name).Scan(&adminInfo)
 	if err != nil {
@@ -117,10 +129,8 @@ func (s *sAdmin) GetAdminByNamePassword(ctx context.Context, in model.UserLoginI
 		return nil
 	} else {
 		return g.Map{
-			"id":   adminInfo.Id,
-			"name": adminInfo.Name,
+			"id":       adminInfo.Id,
+			"username": adminInfo.Name,
 		}
 	}
-
-	return nil
 }

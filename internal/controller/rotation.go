@@ -8,12 +8,12 @@ import (
 	"goframe-shop-test/internal/service"
 )
 
+//承上启下  mvc
 // Rotation 内容管理
 var Rotation = cRotation{}
 
 type cRotation struct{}
 
-//新增
 func (a *cRotation) Create(ctx context.Context, req *backend.RotationReq) (res *backend.RotationRes, err error) {
 	out, err := service.Rotation().Create(ctx, model.RotationCreateInput{
 		RotationCreateUpdateBase: model.RotationCreateUpdateBase{
@@ -28,7 +28,6 @@ func (a *cRotation) Create(ctx context.Context, req *backend.RotationReq) (res *
 	return &backend.RotationRes{RotationId: out.RotationId}, nil
 }
 
-//删除
 func (a *cRotation) Delete(ctx context.Context, req *backend.RotationDeleteReq) (res *backend.RotationDeleteRes, err error) {
 	err = service.Rotation().Delete(ctx, req.Id)
 	return
@@ -38,16 +37,14 @@ func (a *cRotation) Update(ctx context.Context, req *backend.RotationUpdateReq) 
 	err = service.Rotation().Update(ctx, model.RotationUpdateInput{
 		Id: req.Id,
 		RotationCreateUpdateBase: model.RotationCreateUpdateBase{
-
 			PicUrl: req.PicUrl,
 			Link:   req.Link,
 			Sort:   req.Sort,
 		},
 	})
-	return
+	return &backend.RotationUpdateRes{Id: req.Id}, nil
 }
 
-// Index article list
 func (a *cRotation) List(ctx context.Context, req *backend.RotationGetListCommonReq) (res *backend.RotationGetListCommonRes, err error) {
 	getListRes, err := service.Rotation().GetList(ctx, model.RotationGetListInput{
 		Page: req.Page,
@@ -58,10 +55,13 @@ func (a *cRotation) List(ctx context.Context, req *backend.RotationGetListCommon
 		return nil, err
 	}
 
-	return &backend.RotationGetListCommonRes{List: getListRes.List, Page: getListRes.Page, Size: getListRes.Size, Total: getListRes.Total}, nil
+	return &backend.RotationGetListCommonRes{List: getListRes.List,
+		Page:  getListRes.Page,
+		Size:  getListRes.Size,
+		Total: getListRes.Total}, nil
 }
 
-// Index article list
+//前台的取值方法
 func (a *cRotation) ListFrontend(ctx context.Context, req *frontend.RotationGetListCommonReq) (res *frontend.RotationGetListCommonRes, err error) {
 	getListRes, err := service.Rotation().GetList(ctx, model.RotationGetListInput{
 		Page: req.Page,
@@ -72,5 +72,8 @@ func (a *cRotation) ListFrontend(ctx context.Context, req *frontend.RotationGetL
 		return nil, err
 	}
 
-	return &frontend.RotationGetListCommonRes{List: getListRes.List, Page: getListRes.Page, Size: getListRes.Size, Total: getListRes.Total}, nil
+	return &frontend.RotationGetListCommonRes{List: getListRes.List,
+		Page:  getListRes.Page,
+		Size:  getListRes.Size,
+		Total: getListRes.Total}, nil
 }

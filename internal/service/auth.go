@@ -17,7 +17,7 @@ func Auth() *jwt.GfJWTMiddleware {
 
 func init() {
 	auth := jwt.New(&jwt.GfJWTMiddleware{
-		Realm:           "test zone",
+		Realm:           "shop",
 		Key:             []byte("secret key"),
 		Timeout:         time.Minute * 60,
 		MaxRefresh:      time.Minute * 60,

@@ -20,24 +20,24 @@ type CartInfoDao struct {
 
 // CartInfoColumns defines and stores column names for table cart_info.
 type CartInfoColumns struct {
-	Id             string // 购物车表
-	UserId         string //
-	GoodsOptionsId string // 商品规格id
-	Count          string // 商品数量
-	CreatedAt      string //
-	UpdatedAt      string //
-	DeletedAt      string //
+	Id        string // 购物车表
+	UserId    string //
+	GoodsId   string //
+	Count     string // 商品数量
+	CreatedAt string //
+	UpdatedAt string //
+	DeletedAt string //
 }
 
 // cartInfoColumns holds the columns for table cart_info.
 var cartInfoColumns = CartInfoColumns{
-	Id:             "id",
-	UserId:         "user_id",
-	GoodsOptionsId: "goods_options_id",
-	Count:          "count",
-	CreatedAt:      "created_at",
-	UpdatedAt:      "updated_at",
-	DeletedAt:      "deleted_at",
+	Id:        "id",
+	UserId:    "user_id",
+	GoodsId:   "goods_id",
+	Count:     "count",
+	CreatedAt: "created_at",
+	UpdatedAt: "updated_at",
+	DeletedAt: "deleted_at",
 }
 
 // NewCartInfoDao creates and returns a new DAO object for table data access.
@@ -80,6 +80,6 @@ func (dao *CartInfoDao) Ctx(ctx context.Context) *gdb.Model {
 //
 // Note that, you should not Commit or Rollback the transaction in function f
 // as it is automatically handled by this function.
-func (dao *CartInfoDao) Transaction(ctx context.Context, f func(ctx context.Context, tx gdb.TX) error) (err error) {
+func (dao *CartInfoDao) Transaction(ctx context.Context, f func(ctx context.Context, tx *gdb.TX) error) (err error) {
 	return dao.Ctx(ctx).Transaction(ctx, f)
 }

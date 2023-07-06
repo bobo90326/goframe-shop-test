@@ -8,19 +8,19 @@ import (
 	"goframe-shop-test/internal/dao/internal"
 )
 
-// internalFileInfoDao is internal type for wrapping internal DAO implements.
-type internalFileInfoDao = *internal.FileInfoDao
+// internalEventeECardDao is internal type for wrapping internal DAO implements.
+type internalEventeECardDao = *internal.EventeECardDao
 
-// fileInfoDao is the data access object for table file_info.
+// eventeECardDao is the data access object for table evente_e_card.
 // You can define custom methods on it to extend its functionality as you wish.
-type fileInfoDao struct {
-	internalFileInfoDao
+type eventeECardDao struct {
+	internalEventeECardDao
 }
 
 var (
-	// FileInfo is globally public accessible object for table file_info operations.
-	FileInfo = fileInfoDao{
-		internal.NewFileInfoDao(),
+	// EventeECard is globally public accessible object for table evente_e_card operations.
+	EventeECard = eventeECardDao{
+		internal.NewEventeECardDao(),
 	}
 )
 

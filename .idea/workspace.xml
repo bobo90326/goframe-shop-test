@@ -6,13 +6,93 @@
   <component name="ChangeListManager">
     <list default="true" id="b0590bd0-4a2f-4af9-9337-f588dca60a16" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/backend/role.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/backend/role.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/controller/role.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/controller/role.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/logic/role/role.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/logic/role/role.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/backend/admin.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/backend/admin.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/backend/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/backend/api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/backend/data.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/backend/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/backend/login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/backend/position.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/backend/position.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/backend/role.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/backend/roration.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/backend/roration.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/frontend/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/frontend/api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/frontend/rotation.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/frontend/rotation.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/hello/v1/hello.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goframe-shop-test" beforeDir="false" afterPath="$PROJECT_DIR$/goframe-shop-test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/hack/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/cmd/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/cmd/cmd.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/consts/consts.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/consts/consts.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/controller/admin.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/controller/admin.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/controller/data.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/controller/hello.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/controller/hello.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/controller/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/controller/login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/controller/position.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/controller/position.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/controller/role.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/controller/rotation.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/controller/rotation.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/file_info.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/address_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/address_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/admin_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/admin_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/article_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/article_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/cart_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/cart_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/category_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/category_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/collection_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/collection_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/comment_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/comment_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/consignee_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/consignee_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/coupon_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/coupon_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/file_info.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/goods_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/goods_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/goods_options_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/goods_options_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/order_goods_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/order_goods_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/order_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/order_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/permission_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/permission_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/position_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/position_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/praise_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/praise_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/refund_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/refund_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/role_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/role_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/role_permission_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/role_permission_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/rotation_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/rotation_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/user_coupon_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/user_coupon_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/internal/user_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/internal/user_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/logic/admin/admin.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/logic/admin/admin.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/logic/data/data.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/logic/logic.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/logic/logic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/logic/login/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/logic/login/login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/logic/middleware/middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/logic/middleware/middleware.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/logic/position/position.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/logic/position/position.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/logic/role/role.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/logic/rotation/rotation.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/logic/rotation/rotation.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/model/admin.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/admin.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/role.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/role.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/service/role.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/role.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/data.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/do/admin_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/do/admin_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/do/cart_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/do/cart_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/do/category_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/do/category_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/do/collection_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/do/collection_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/do/file_info.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/do/goods_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/do/goods_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/do/order_goods_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/do/order_goods_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/do/order_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/do/order_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/entity/cart_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/entity/cart_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/entity/category_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/entity/category_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/entity/collection_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/entity/collection_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/entity/file_info.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/entity/goods_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/entity/goods_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/entity/order_goods_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/entity/order_goods_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/entity/order_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/entity/order_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/position.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/position.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/role.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/model/rotation.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/rotation.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/packed/packed.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/packed/packed.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/service/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/data.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/service/role.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest/config/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/manifest/config/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest/protobuf/.keep-if-necessary" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utility/response/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/utility/response/response.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utility/utils.go" beforeDir="false" afterPath="$PROJECT_DIR$/utility/utils.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,25 +118,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/mac",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mac&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/api/frontend" />

@@ -3,27 +3,24 @@ package position
 import (
 	"context"
 	"github.com/gogf/gf/v2/database/gdb"
-	"github.com/gogf/gf/v2/frame/g"
-	"goframe-shop-test/internal/model/entity"
-	"goframe-shop-test/internal/service"
-
 	"github.com/gogf/gf/v2/encoding/ghtml"
+	"github.com/gogf/gf/v2/frame/g"
 	"goframe-shop-test/internal/dao"
 	"goframe-shop-test/internal/model"
+	"goframe-shop-test/internal/model/entity"
+	"goframe-shop-test/internal/service"
 )
 
 type sPosition struct{}
 
 func init() {
 	service.RegisterPosition(New())
-
 }
 
 func New() *sPosition {
 	return &sPosition{}
 }
 
-// Create 创建内容
 func (s *sPosition) Create(ctx context.Context, in model.PositionCreateInput) (out model.PositionCreateOutput, err error) {
 	// 不允许HTML代码
 	if err = ghtml.SpecialCharsMapOrStruct(in); err != nil {
@@ -38,18 +35,18 @@ func (s *sPosition) Create(ctx context.Context, in model.PositionCreateInput) (o
 
 // Delete 删除
 func (s *sPosition) Delete(ctx context.Context, id uint) error {
-	return dao.PositionInfo.Transaction(ctx, func(ctx context.Context, tx gdb.TX) error {
+	return dao.PositionInfo.Transaction(ctx, func(ctx context.Context, tx *gdb.TX) error {
 		// 删除内容
 		_, err := dao.PositionInfo.Ctx(ctx).Where(g.Map{
 			dao.PositionInfo.Columns().Id: id,
-		}).Unscoped().Delete()
+		}).Delete()
 		return err
 	})
 }
 
 // Update 修改
 func (s *sPosition) Update(ctx context.Context, in model.PositionUpdateInput) error {
-	return dao.PositionInfo.Transaction(ctx, func(ctx context.Context, tx gdb.TX) error {
+	return dao.PositionInfo.Transaction(ctx, func(ctx context.Context, tx *gdb.TX) error {
 		// 不允许HTML代码
 		if err := ghtml.SpecialCharsMapOrStruct(in); err != nil {
 			return err
@@ -73,8 +70,11 @@ func (s *sPosition) GetList(ctx context.Context, in model.PositionGetListInput) 
 		Page: in.Page,
 		Size: in.Size,
 	}
+
+	// 分配查询
 	listModel := m.Page(in.Page, in.Size)
-	listModel = listModel.OrderDesc(dao.PositionInfo.Columns().Id)
+	// 排序方式
+	listModel = listModel.OrderDesc(dao.PositionInfo.Columns().Sort)
 
 	// 执行查询
 	var list []*entity.PositionInfo
@@ -89,10 +89,12 @@ func (s *sPosition) GetList(ctx context.Context, in model.PositionGetListInput) 
 	if err != nil {
 		return out, err
 	}
-	// Position todo
+	// Position
+	//指定item的键名用：ScanList
+	//if err := listModel.ScanList(&out.List, "Position"); err != nil {
+	//不指定item的键名用：Scan
 	if err := listModel.Scan(&out.List); err != nil {
 		return out, err
 	}
-
 	return
 }
