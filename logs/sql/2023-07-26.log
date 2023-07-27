@@ -1,0 +1,33 @@
+2023-07-26 22:41:05.327 [DEBU] {f0299c6ae5717517dfb3902ece966ef6} [ 30 ms] [default] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-07-26 22:41:05.335 [DEBU] {f8d66c6ce5717517e0b3902e9b24a459} [  7 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-26 22:41:26.150 [DEBU] {00403745ea71751793a38b2a2b843c27} [  5 ms] [default] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-07-26 22:41:26.152 [DEBU] {50529345ea71751794a38b2a3f059dec} [  1 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-26 22:41:26.155 [DEBU] {40cab745ea71751795a38b2a512398d5} [  2 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='3' LIMIT 1
+2023-07-26 22:41:26.161 [DEBU] {e82fe145ea71751796a38b2af14a8861} [  5 ms] [default] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2023-07-26 22:41:26.167 [DEBU] {a8fa3746ea71751797a38b2a3b58548f} [  6 ms] [default] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('2')
+2023-07-26 22:41:26.170 [DEBU] {00e89246ea71751798a38b2af6dbb6da} [  3 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-07-26 22:41:26.172 [DEBU] {9873c446ea71751799a38b2a8db77d4c} [  1 ms] [default] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-07-26 23:21:28.542 [DEBU] {b8f04b9b19747517d7310272d6668bd7} [ 67 ms] [default] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-07-26 23:21:28.547 [DEBU] {f81f5b9f19747517d83102726f28e666} [  3 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-26 23:23:08.710 [DEBU] {88bc74f130747517da310272afd264e6} [  5 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-26 23:23:09.790 [DEBU] {98f30f3231747517dc3102726d048138} [  1 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-26 23:23:49.462 [DEBU] {7816546e3a747517cf3f5c094ce23131} [  7 ms] [default] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-07-26 23:23:49.464 [DEBU] {702fd46e3a747517d03f5c09875837f8} [  1 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-26 23:26:15.475 [DEBU] {f8cb756d5c7475175ac154672522f7e5} [  6 ms] [default] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-07-26 23:26:15.479 [DEBU] {f0def66d5c7475175bc154672049cf7e} [  1 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-26 23:28:11.169 [DEBU] {a08e505d7774751711381062907fee61} [  7 ms] [default] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-07-26 23:28:11.172 [DEBU] {80bdcd5d777475171238106265927edc} [  1 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-26 23:31:20.683 [DEBU] {08508a7da3747517143810626bddd947} [  1 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-26 23:32:02.822 [DEBU] {4856de4cad74751749a23273283e668d} [  7 ms] [default] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-07-26 23:32:02.824 [DEBU] {683f574dad7475174aa232734ea20ee8} [  1 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-26 23:34:51.900 [DEBU] {f017efaad47475174ca23273ccf82a35} [  3 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-26 23:38:55.129 [DEBU] {b808894c0d7575174ea23273b10070c8} [  3 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-26 23:43:09.134 [DEBU] {106b3870487575171c9da33786fc44e9} [  6 ms] [default] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-07-26 23:43:09.139 [DEBU] {3095bb70487575171d9da3370b4b7b57} [  3 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-26 23:43:13.224 [DEBU] {60953764497575171e9da337f4c88719} [  3 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='3' LIMIT 1
+2023-07-26 23:43:13.227 [DEBU] {b0266a64497575171f9da33751122787} [  2 ms] [default] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2023-07-26 23:43:13.230 [DEBU] {d8be956449757517209da3371484cab7} [  2 ms] [default] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('2')
+2023-07-26 23:43:13.233 [DEBU] {408ebd6449757517219da337fe0050c7} [  3 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-07-26 23:43:13.233 [DEBU] {d0f7e66449757517229da337de174094} [  0 ms] [default] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-07-26 23:47:48.142 [DEBU] {b0f4596689757517527e2502221aa4c9} [  7 ms] [default] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-07-26 23:47:48.143 [DEBU] {283bc86689757517537e2502879f513d} [  1 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
