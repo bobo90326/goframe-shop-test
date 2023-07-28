@@ -1,0 +1,438 @@
+2023-07-29 00:10:22.801 [DEBU] {8028fdeded137617be917f7f8b69b592} [ 56 ms] [default] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-07-29 00:10:22.804 [DEBU] {c86f6ff1ed137617bf917f7f6d377bde} [  2 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-29 00:10:22.806 [DEBU] {385ba0f1ed137617c0917f7f6b260087} [  0 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='3' LIMIT 1
+2023-07-29 00:10:22.808 [DEBU] {284bb1f1ed137617c1917f7f9f561f25} [  1 ms] [default] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2023-07-29 00:10:22.810 [DEBU] {90dfcdf1ed137617c2917f7f4292e2f8} [  1 ms] [default] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('2')
+2023-07-29 00:10:22.811 [DEBU] {3083dff1ed137617c3917f7fb492b999} [  1 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-07-29 00:10:22.812 [DEBU] {60e5f7f1ed137617c4917f7fd6569ff0} [  1 ms] [default] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-07-29 00:11:24.020 [DEBU] {384e2732fc137617cc917f7f33a7ff2c} [  2 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-29 00:11:24.021 [DEBU] {d8cc5332fc137617cd917f7f16bbe18e} [  0 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='3' LIMIT 1
+2023-07-29 00:11:24.022 [DEBU] {c84b6232fc137617ce917f7f887c9a0e} [  0 ms] [default] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('2')
+2023-07-29 00:11:24.023 [DEBU] {b8d06f32fc137617cf917f7f7ad48bd6} [  0 ms] [default] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-07-29 00:16:26.954 [DEBU] {683c26ba421476179e02d37421256be1} [  7 ms] [default] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-07-29 00:16:26.955 [DEBU] {50a692ba421476179f02d3745e8d6c0a} [  1 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-29 00:16:26.957 [DEBU] {f8c4b2ba42147617a002d374212a9bb8} [  1 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='3' LIMIT 1
+2023-07-29 00:16:26.962 [DEBU] {50d3c9ba42147617a102d3745ace4b86} [  4 ms] [default] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2023-07-29 00:16:26.964 [DEBU] {d81e14bb42147617a202d374ba06941a} [  1 ms] [default] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('2')
+2023-07-29 00:16:26.966 [DEBU] {88e925bb42147617a302d374deeb1f25} [  2 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-07-29 00:16:26.967 [DEBU] {30c650bb42147617a402d3749b34f754} [  0 ms] [default] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-07-29 00:17:41.111 [DEBU] {a05d81fe53147617ac02d37468a09d7f} [  3 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-29 00:17:41.113 [DEBU] {60c4befe53147617ad02d374f41f58f5} [  1 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='3' LIMIT 1
+2023-07-29 00:17:41.115 [DEBU] {e853d4fe53147617ae02d37486f31ea9} [  1 ms] [default] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('2')
+2023-07-29 00:17:41.116 [DEBU] {483deafe53147617af02d374307bf57e} [  1 ms] [default] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-07-29 00:20:30.707 [DEBU] {48bc267b7b147617daa71f1f9c6778ba} [  4 ms] [default] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-07-29 00:20:30.710 [DEBU] {9059737b7b147617dba71f1f38beab71} [  2 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-29 00:20:30.713 [DEBU] {40abad7b7b147617dca71f1f44a5ae5f} [  1 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='3' LIMIT 1
+2023-07-29 00:20:30.717 [DEBU] {70aec07b7b147617dda71f1f8a372778} [  4 ms] [default] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2023-07-29 00:20:30.719 [DEBU] {a884fd7b7b147617dea71f1f46c1b208} [  2 ms] [default] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('2')
+2023-07-29 00:20:30.722 [DEBU] {f053187c7b147617dfa71f1f5e1a5450} [  3 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-07-29 00:20:30.722 [DEBU] {50b9437c7b147617e0a71f1fcfeb9800} [  0 ms] [default] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-07-29 00:22:59.264 [DEBU] {08f5bf119e1476170fc6d45070dd6601} [  5 ms] [default] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-07-29 00:22:59.266 [DEBU] {40051d129e14761710c6d4507124e6c0} [  1 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-07-29 00:22:59.267 [DEBU] {f8cd3c129e14761711c6d4507273b2cb} [  0 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='3' LIMIT 1
+2023-07-29 00:22:59.270 [DEBU] {e01247129e14761712c6d450e9a05814} [  2 ms] [default] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2023-07-29 00:22:59.271 [DEBU] {70176c129e14761713c6d45039f70cdf} [  1 ms] [default] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('2')
+2023-07-29 00:22:59.274 [DEBU] {50f878129e14761714c6d450443fc57a} [  3 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-07-29 00:22:59.275 [DEBU] {60d5ae129e14761715c6d450dd026154} [  0 ms] [default] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL
+2023-07-29 00:25:45.294 [DEBU] {583b42b9c41476177fe6ba43fd6868f6} [ 13 ms] [default] [rows:15 ] SHOW FULL COLUMNS FROM `order_info`
+2023-07-29 00:25:45.309 [DEBU] {583b42b9c41476177fe6ba43fd6868f6} [ 14 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `order_info` WHERE (`created_at` BETWEEN '2023-07-29 00:25:45' AND '2023-07-29 23:59:59') AND (id)
+2023-07-29 00:26:57.567 [DEBU] {c8de998dd5147617f0027d5d9d18abd2} [  6 ms] [default] [rows:15 ] SHOW FULL COLUMNS FROM `order_info`
+2023-07-29 00:26:57.569 [DEBU] {c8de998dd5147617f0027d5d9d18abd2} [  1 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `order_info` WHERE (`created_at` BETWEEN '2023-07-29 00:26:57' AND '2023-07-29 23:59:59') AND (id)
+2023-07-29 00:27:07.034 [DEBU] {50433fc2d7147617f1027d5d5fe53e52} [  0 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `order_info` WHERE (`created_at` BETWEEN '2023-07-29 00:27:07' AND '2023-07-29 23:59:59') AND (id)
+2023-07-29 00:29:59.966 [ERRO] {f8a97405001576173c3da155020083ab} [  2 ms] [default] [rows:0  ] SHOW FULL COLUMNS FROM `order_info`
+Error: Error 1193: Unknown system variable 'Loc'
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core.go:674
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core_underlying.go:277
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core.go:155
+5.  github.com/gogf/gf/contrib/drivers/mysql/v2.(*Driver).TableFields
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/contrib/drivers/mysql/v2@v2.2.1/mysql.go:149
+6.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_driver_wrapper_db.go:80
+7.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).doSetWithLockCheck
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/container/gmap/gmap_hash_str_any_map.go:217
+8.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).GetOrSetFuncLock
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/container/gmap/gmap_hash_str_any_map.go:254
+9.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_driver_wrapper_db.go:78
+10. github.com/gogf/gf/v2/database/gdb.(*Model).TableFields
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_utility.go:38
+11. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldName
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_time.go:98
+12. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldNameDeleted
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_time.go:92
+13. github.com/gogf/gf/v2/database/gdb.(*Model).getConditionForSoftDeleting
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_time.go:144
+14. github.com/gogf/gf/v2/database/gdb.(*Model).formatCondition
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_select.go:619
+15. github.com/gogf/gf/v2/database/gdb.(*Model).getFormattedSqlAndArgs
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_select.go:569
+16. github.com/gogf/gf/v2/database/gdb.(*Model).Count
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_select.go:387
+17. github.com/gogf/gf/v2/database/gdb.(*Model).Count
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_select.go:384
+18. goframe-shop-test/internal/logic/data.(*sData).todayOrderCount
+    /Users/mac/goframe-shop-test/internal/logic/data/data.go:36
+19. goframe-shop-test/internal/logic/data.(*sData).DataHead
+    /Users/mac/goframe-shop-test/internal/logic/data/data.go:26
+20. goframe-shop-test/internal/controller.(*cData).DataHead
+    /Users/mac/goframe-shop-test/internal/controller/data.go:15
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:152
+22. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:129
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:75
+25. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+26. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+27. goframe-shop-test/internal/logic/middleware.(*sMiddleware).ResponseHandler
+    /Users/mac/goframe-shop-test/internal/logic/middleware/middleware.go:29
+28. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:55
+29. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+30. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:54
+31. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+32. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+33. goframe-shop-test/internal/logic/middleware.(*sMiddleware).Ctx
+    /Users/mac/goframe-shop-test/internal/logic/middleware/middleware.go:86
+34. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:55
+35. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+36. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:54
+37. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+38. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+39. goframe-shop-test/internal/logic/middleware.(*sMiddleware).CORS
+    /Users/mac/goframe-shop-test/internal/logic/middleware/middleware.go:91
+40. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:55
+41. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+42. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:54
+43. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+44. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+45. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_middleware_tracing.go:78
+46. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:96
+47. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+48. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:95
+49. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+50. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+51. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_server_handler.go:121
+
+2023-07-29 00:29:59.975 [ERRO] {f8a97405001576173c3da155020083ab} [  1 ms] [default] [rows:0  ] SELECT COUNT(1) FROM `order_info` WHERE (`created_at` BETWEEN '2023-07-29 00:29:59' AND '2023-07-29 23:59:59') AND (id)
+Error: Error 1193: Unknown system variable 'Loc'
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core.go:674
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core_underlying.go:277
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core.go:155
+5.  github.com/gogf/gf/v2/database/gdb.(*HookSelectInput).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_hook.go:113
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doGetAllBySql
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_select.go:547
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).Count
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_select.go:388
+8.  github.com/gogf/gf/v2/database/gdb.(*Model).Count
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_select.go:384
+9.  goframe-shop-test/internal/logic/data.(*sData).todayOrderCount
+    /Users/mac/goframe-shop-test/internal/logic/data/data.go:36
+10. goframe-shop-test/internal/logic/data.(*sData).DataHead
+    /Users/mac/goframe-shop-test/internal/logic/data/data.go:26
+11. goframe-shop-test/internal/controller.(*cData).DataHead
+    /Users/mac/goframe-shop-test/internal/controller/data.go:15
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:152
+13. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+14. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:129
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:75
+16. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+18. goframe-shop-test/internal/logic/middleware.(*sMiddleware).ResponseHandler
+    /Users/mac/goframe-shop-test/internal/logic/middleware/middleware.go:29
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:55
+20. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:54
+22. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+24. goframe-shop-test/internal/logic/middleware.(*sMiddleware).Ctx
+    /Users/mac/goframe-shop-test/internal/logic/middleware/middleware.go:86
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:55
+26. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:54
+28. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+30. goframe-shop-test/internal/logic/middleware.(*sMiddleware).CORS
+    /Users/mac/goframe-shop-test/internal/logic/middleware/middleware.go:91
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:55
+32. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:54
+34. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+36. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_middleware_tracing.go:78
+37. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:96
+38. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+39. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:95
+40. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+41. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+42. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_server_handler.go:121
+
+2023-07-29 00:31:31.394 [ERRO] {4034114f15157617cbf73b03c6778e66} [  2 ms] [default] [rows:0  ] SHOW FULL COLUMNS FROM `order_info`
+Error: Error 1193: Unknown system variable 'Loc'
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core.go:674
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core_underlying.go:277
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core.go:155
+5.  github.com/gogf/gf/contrib/drivers/mysql/v2.(*Driver).TableFields
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/contrib/drivers/mysql/v2@v2.2.1/mysql.go:149
+6.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_driver_wrapper_db.go:80
+7.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).doSetWithLockCheck
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/container/gmap/gmap_hash_str_any_map.go:217
+8.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).GetOrSetFuncLock
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/container/gmap/gmap_hash_str_any_map.go:254
+9.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_driver_wrapper_db.go:78
+10. github.com/gogf/gf/v2/database/gdb.(*Model).TableFields
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_utility.go:38
+11. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldName
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_time.go:98
+12. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldNameDeleted
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_time.go:92
+13. github.com/gogf/gf/v2/database/gdb.(*Model).getConditionForSoftDeleting
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_time.go:144
+14. github.com/gogf/gf/v2/database/gdb.(*Model).formatCondition
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_select.go:619
+15. github.com/gogf/gf/v2/database/gdb.(*Model).getFormattedSqlAndArgs
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_select.go:569
+16. github.com/gogf/gf/v2/database/gdb.(*Model).Count
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_select.go:387
+17. github.com/gogf/gf/v2/database/gdb.(*Model).Count
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_select.go:384
+18. goframe-shop-test/internal/logic/data.(*sData).todayOrderCount
+    /Users/mac/goframe-shop-test/internal/logic/data/data.go:36
+19. goframe-shop-test/internal/logic/data.(*sData).DataHead
+    /Users/mac/goframe-shop-test/internal/logic/data/data.go:26
+20. goframe-shop-test/internal/controller.(*cData).DataHead
+    /Users/mac/goframe-shop-test/internal/controller/data.go:15
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:152
+22. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:129
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:75
+25. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+26. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+27. goframe-shop-test/internal/logic/middleware.(*sMiddleware).ResponseHandler
+    /Users/mac/goframe-shop-test/internal/logic/middleware/middleware.go:29
+28. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:55
+29. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+30. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:54
+31. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+32. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+33. goframe-shop-test/internal/logic/middleware.(*sMiddleware).Ctx
+    /Users/mac/goframe-shop-test/internal/logic/middleware/middleware.go:86
+34. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:55
+35. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+36. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:54
+37. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+38. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+39. goframe-shop-test/internal/logic/middleware.(*sMiddleware).CORS
+    /Users/mac/goframe-shop-test/internal/logic/middleware/middleware.go:91
+40. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:55
+41. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+42. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:54
+43. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+44. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+45. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_middleware_tracing.go:78
+46. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:96
+47. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+48. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:95
+49. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+50. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+51. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_server_handler.go:121
+
+2023-07-29 00:31:31.401 [ERRO] {4034114f15157617cbf73b03c6778e66} [  2 ms] [default] [rows:0  ] SELECT COUNT(1) FROM `order_info` WHERE (`created_at` BETWEEN '2023-07-29 00:31:31' AND '2023-07-29 23:59:59') AND (id)
+Error: Error 1193: Unknown system variable 'Loc'
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core.go:674
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core_underlying.go:277
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core.go:155
+5.  github.com/gogf/gf/v2/database/gdb.(*HookSelectInput).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_hook.go:113
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doGetAllBySql
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_select.go:547
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).Count
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_select.go:388
+8.  github.com/gogf/gf/v2/database/gdb.(*Model).Count
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_select.go:384
+9.  goframe-shop-test/internal/logic/data.(*sData).todayOrderCount
+    /Users/mac/goframe-shop-test/internal/logic/data/data.go:36
+10. goframe-shop-test/internal/logic/data.(*sData).DataHead
+    /Users/mac/goframe-shop-test/internal/logic/data/data.go:26
+11. goframe-shop-test/internal/controller.(*cData).DataHead
+    /Users/mac/goframe-shop-test/internal/controller/data.go:15
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:152
+13. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+14. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:129
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:75
+16. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+18. goframe-shop-test/internal/logic/middleware.(*sMiddleware).ResponseHandler
+    /Users/mac/goframe-shop-test/internal/logic/middleware/middleware.go:29
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:55
+20. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:54
+22. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+24. goframe-shop-test/internal/logic/middleware.(*sMiddleware).Ctx
+    /Users/mac/goframe-shop-test/internal/logic/middleware/middleware.go:86
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:55
+26. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:54
+28. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+30. goframe-shop-test/internal/logic/middleware.(*sMiddleware).CORS
+    /Users/mac/goframe-shop-test/internal/logic/middleware/middleware.go:91
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:55
+32. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:54
+34. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+36. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_middleware_tracing.go:78
+37. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:96
+38. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+39. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:95
+40. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+41. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+42. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_server_handler.go:121
+
+2023-07-29 00:32:33.485 [DEBU] {5858e3c323157617d786ff6e25eaba26} [  5 ms] [default] [rows:15 ] SHOW FULL COLUMNS FROM `order_info`
+2023-07-29 00:32:33.488 [DEBU] {5858e3c323157617d786ff6e25eaba26} [  2 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `order_info` WHERE (`created_at` BETWEEN '2023-07-29 00:32:33' AND '2023-07-29 23:59:59') AND (id)
+2023-07-29 00:32:35.868 [DEBU] {987a385224157617d886ff6ea8059a6e} [  1 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `order_info` WHERE (`created_at` BETWEEN '2023-07-29 00:32:35' AND '2023-07-29 23:59:59') AND (id)
+2023-07-29 00:36:26.821 [DEBU] {e8afc6175a157617c4d8267964e03ac5} [  6 ms] [default] [rows:15 ] SHOW FULL COLUMNS FROM `order_info`
+2023-07-29 00:36:26.823 [DEBU] {e8afc6175a157617c4d8267964e03ac5} [  1 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `order_info` WHERE (`created_at` BETWEEN '2023-07-29 00:00:00' AND '2023-07-29 23:59:59') AND (id)
+2023-07-29 00:36:28.463 [DEBU] {5897f3795a157617c5d8267992d50b96} [  2 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `order_info` WHERE (`created_at` BETWEEN '2023-07-29 00:00:00' AND '2023-07-29 23:59:59') AND (id)
+2023-07-29 00:39:41.205 [DEBU] {c8d8345a87157617c6d826792bb41265} [  3 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `order_info` WHERE (`created_at` BETWEEN '2023-07-29 00:00:00' AND '2023-07-29 23:59:59') AND (id)
+2023-07-29 00:39:42.453 [DEBU] {f814b5a487157617c7d826798c1f3993} [  1 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `order_info` WHERE (`created_at` BETWEEN '2023-07-29 00:00:00' AND '2023-07-29 23:59:59') AND (id)
+2023-07-29 00:42:17.908 [DEBU] {b8656cd6ab157617c8d8267990251b71} [  2 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `order_info` WHERE (`created_at` BETWEEN '2023-07-29 00:00:00' AND '2023-07-29 23:59:59') AND (id)
