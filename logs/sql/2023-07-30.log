@@ -1,0 +1,97 @@
+2023-07-30 11:29:08.149 [DEBU] {40990e9e8c877617e18b592e59a166ea} [  6 ms] [default] [rows:15 ] SHOW FULL COLUMNS FROM `order_info`
+2023-07-30 11:29:08.166 [DEBU] {40990e9e8c877617e18b592e59a166ea} [ 16 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `order_info` WHERE (`created_at` BETWEEN '2023-07-30 00:00:00' AND '2023-07-30 23:59:59') AND (id)
+2023-07-30 11:30:00.873 [DEBU] {f0ddf3e498877617e58b592edcf00f2e} [  3 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `role_info`
+2023-07-30 11:30:00.881 [DEBU] {f0ddf3e498877617e58b592edcf00f2e} [  7 ms] [default] [rows:1  ] INSERT INTO `role_info`(`name`,`updated_at`,`desc`,`created_at`) VALUES('运营4','2023-07-30 11:30:00','测试','2023-07-30 11:30:00') 
+2023-07-30 16:35:09.561 [DEBU] {58e34cb73f9876170245446ec34a5601} [  9 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `role_info`
+2023-07-30 16:35:09.567 [ERRO] {58e34cb73f9876170245446ec34a5601} [  5 ms] [default] [rows:0  ] INSERT INTO `role_info`(`name`,`created_at`,`desc`,`updated_at`) VALUES('运营4','2023-07-30 16:35:09','测试','2023-07-30 16:35:09') 
+Error: Error 1062: Duplicate entry '运营4' for key 'role_info.unique_index'
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core.go:674
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core_underlying.go:277
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoExec
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core_underlying.go:135
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoInsert
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_core.go:451
+5.  github.com/gogf/gf/v2/database/gdb.(*HookInsertInput).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_hook.go:122
+6.  github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_insert.go:366
+7.  github.com/gogf/gf/v2/database/gdb.(*Model).InsertAndGetId
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/database/gdb/gdb_model_insert.go:197
+8.  goframe-shop-test/internal/logic/role.(*sRole).Create
+    /Users/mac/goframe-shop-test/internal/logic/role/role.go:24
+9.  goframe-shop-test/internal/controller.(*cRole).Create
+    /Users/mac/goframe-shop-test/internal/controller/role.go:15
+10. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:152
+11. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+12. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:129
+13. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:75
+14. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+15. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+16. goframe-shop-test/internal/logic/middleware.(*sMiddleware).ResponseHandler
+    /Users/mac/goframe-shop-test/internal/logic/middleware/middleware.go:29
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:55
+18. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:54
+20. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+21. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+22. goframe-shop-test/internal/logic/middleware.(*sMiddleware).Ctx
+    /Users/mac/goframe-shop-test/internal/logic/middleware/middleware.go:86
+23. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:55
+24. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+25. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:54
+26. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+27. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+28. goframe-shop-test/internal/logic/middleware.(*sMiddleware).CORS
+    /Users/mac/goframe-shop-test/internal/logic/middleware/middleware.go:91
+29. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:55
+30. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+31. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:54
+32. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+33. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+34. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_middleware_tracing.go:78
+35. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:96
+36. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_func.go:55
+37. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:95
+38. github.com/gogf/gf/v2/util/gutil.TryCatch
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/util/gutil/gutil.go:56
+39. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_request_middleware.go:49
+40. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    /Users/mac/go/pkg/mod/github.com/gogf/gf/v2@v2.2.1/net/ghttp/ghttp_server_handler.go:121
+
+2023-07-30 16:37:26.143 [DEBU] {e0f06a845f9876178c965703590740ff} [  5 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `role_info`
+2023-07-30 16:37:26.146 [DEBU] {e0f06a845f9876178c965703590740ff} [  2 ms] [default] [rows:0  ] UPDATE `role_info` SET `desc`='开发111',`name`='开发',`updated_at`='2023-07-30 16:37:26' WHERE (`id`=4) AND `deleted_at` IS NULL
+2023-07-30 16:38:04.468 [DEBU] {208e0171689876178d965703db9d8804} [  4 ms] [default] [rows:1  ] UPDATE `role_info` SET `desc`='开发111',`updated_at`='2023-07-30 16:38:04',`name`='开发' WHERE (`id`=7) AND `deleted_at` IS NULL
+2023-07-30 16:39:14.465 [DEBU] {302922bd789876178f9657030f8f8a70} [  4 ms] [default] [rows:1  ] DELETE FROM `role_info` WHERE `id`=6
+2023-07-30 16:49:44.665 [DEBU] {00bcf3770b99761704561e308d6ff5da} [  4 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `role_info`
+2023-07-30 16:49:44.667 [DEBU] {00bcf3770b99761704561e308d6ff5da} [  1 ms] [default] [rows:3  ] SELECT `id`,`name`,`desc`,`created_at`,`updated_at`,`deleted_at` FROM `role_info` WHERE `deleted_at` IS NULL LIMIT 0,20
+2023-07-30 16:49:44.668 [DEBU] {00bcf3770b99761704561e308d6ff5da} [  1 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `role_info` WHERE `deleted_at` IS NULL
+2023-07-30 16:49:44.678 [DEBU] {00bcf3770b99761704561e308d6ff5da} [  9 ms] [default] [rows:3  ] SELECT `id`,`name`,`desc`,`created_at`,`updated_at` FROM `role_info` WHERE `deleted_at` IS NULL LIMIT 0,20
