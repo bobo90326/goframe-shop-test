@@ -95,3 +95,15 @@ Stack:
 2023-07-30 16:49:44.667 [DEBU] {00bcf3770b99761704561e308d6ff5da} [  1 ms] [default] [rows:3  ] SELECT `id`,`name`,`desc`,`created_at`,`updated_at`,`deleted_at` FROM `role_info` WHERE `deleted_at` IS NULL LIMIT 0,20
 2023-07-30 16:49:44.668 [DEBU] {00bcf3770b99761704561e308d6ff5da} [  1 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `role_info` WHERE `deleted_at` IS NULL
 2023-07-30 16:49:44.678 [DEBU] {00bcf3770b99761704561e308d6ff5da} [  9 ms] [default] [rows:3  ] SELECT `id`,`name`,`desc`,`created_at`,`updated_at` FROM `role_info` WHERE `deleted_at` IS NULL LIMIT 0,20
+2023-07-30 18:18:11.172 [DEBU] {40ca5cfcde9d7617d77a7110672b6b60} [  4 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-07-30 18:18:11.176 [DEBU] {40ca5cfcde9d7617d77a7110672b6b60} [  3 ms] [default] [rows:1  ] INSERT INTO `permission_info`(`created_at`,`name`,`path`,`updated_at`) VALUES('2023-07-30 18:18:11','商品','admin/goods','2023-07-30 18:18:11') 
+2023-07-30 18:21:44.326 [DEBU] {0867899d109e7617d87a71100976de0a} [  2 ms] [default] [rows:0  ] UPDATE `permission_info` SET `updated_at`='2023-07-30 18:21:44',`name`='商品',`path`='admin/goods' WHERE (`id`=3) AND `deleted_at` IS NULL
+2023-07-30 18:22:06.974 [DEBU] {38e98be3159e7617d97a7110a99c7e17} [  1 ms] [default] [rows:0  ] UPDATE `permission_info` SET `name`='商品',`updated_at`='2023-07-30 18:22:06',`path`='admin/goods' WHERE (`id`=3) AND `deleted_at` IS NULL
+2023-07-30 18:22:26.592 [DEBU] {a0ffae741a9e7617da7a71105f33ff37} [  4 ms] [default] [rows:1  ] UPDATE `permission_info` SET `updated_at`='2023-07-30 18:22:26',`name`='商品7',`path`='admin/goods' WHERE (`id`=7) AND `deleted_at` IS NULL
+2023-07-30 18:23:17.962 [DEBU] {a00c9b6a269e7617db7a7110c96d98fa} [  3 ms] [default] [rows:1  ] DELETE FROM `permission_info` WHERE `id`=7
+2023-07-30 18:23:31.987 [DEBU] {309aaeae299e7617dc7a7110d2210f4c} [  1 ms] [default] [rows:4  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE `deleted_at` IS NULL LIMIT 0,10
+2023-07-30 18:23:31.988 [DEBU] {309aaeae299e7617dc7a7110d2210f4c} [  1 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `permission_info` WHERE `deleted_at` IS NULL
+2023-07-30 18:23:31.989 [DEBU] {309aaeae299e7617dc7a7110d2210f4c} [  1 ms] [default] [rows:4  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at` FROM `permission_info` WHERE `deleted_at` IS NULL LIMIT 0,10
+2023-07-30 21:12:27.470 [DEBU] {e884878861a77617dd7a71109f463a4e} [  2 ms] [default] [rows:4  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE `deleted_at` IS NULL LIMIT 0,20
+2023-07-30 21:12:27.472 [DEBU] {e884878861a77617dd7a71109f463a4e} [  1 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `permission_info` WHERE `deleted_at` IS NULL
+2023-07-30 21:12:27.472 [DEBU] {e884878861a77617dd7a71109f463a4e} [  0 ms] [default] [rows:4  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at` FROM `permission_info` WHERE `deleted_at` IS NULL LIMIT 0,20
