@@ -23,3 +23,12 @@ redis:
       db: 1
       pass: 123456
       idleTimeout: 600
+
+qiniu:
+  bucket: "x"
+  accessKey: "x"
+  secretKey: "x"
+  url: "http://x.x.x/"
+
+upload:
+  path: "upload"

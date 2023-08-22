@@ -1,0 +1,10 @@
+2023-08-21 23:26:00.318 [DEBU] {28d3f4a56f6f7d17897e8431188ff84d} [ 41 ms] [default] [rows:8  ] SHOW FULL COLUMNS FROM `admin_info`
+2023-08-21 23:26:00.328 [DEBU] {88277fa86f6f7d178a7e843170fe2ddc} [  8 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-08-21 23:26:03.238 [DEBU] {c89e6e56706f7d178c7e8431333f5a51} [  0 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-08-21 23:29:12.817 [DEBU] {08de0d7a9c6f7d178e7e84314866717f} [  3 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-08-21 23:38:37.328 [DEBU] {a08387e91f707d17917e8431010875e4} [  3 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `name`='wangzhongyang' LIMIT 1
+2023-08-21 23:38:37.331 [DEBU] {4882d6e91f707d17927e843182fda924} [  1 ms] [default] [rows:1  ] SELECT `id`,`name`,`password`,`role_ids`,`created_at`,`updated_at`,`user_salt`,`is_admin` FROM `admin_info` WHERE `id`='3' LIMIT 1
+2023-08-21 23:38:37.335 [DEBU] {e884ede91f707d17937e8431d333230c} [  3 ms] [default] [rows:5  ] SHOW FULL COLUMNS FROM `role_permission_info`
+2023-08-21 23:38:37.341 [DEBU] {c0f328ea1f707d17947e84314ffbab4d} [  5 ms] [default] [rows:0  ] SELECT `id`,`role_id`,`permission_id`,`created_at`,`updated_at` FROM `role_permission_info` WHERE `role_id` IN ('2')
+2023-08-21 23:38:37.345 [DEBU] {187680ea1f707d17957e84316384e8aa} [  4 ms] [default] [rows:6  ] SHOW FULL COLUMNS FROM `permission_info`
+2023-08-21 23:38:37.347 [DEBU] {08edb9ea1f707d17967e8431afe3b1b2} [  2 ms] [default] [rows:0  ] SELECT `id`,`name`,`path`,`created_at`,`updated_at`,`deleted_at` FROM `permission_info` WHERE (0=1) AND `deleted_at` IS NULL

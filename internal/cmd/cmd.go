@@ -75,6 +75,8 @@ var (
 					group.ALLMap(g.Map{
 						"/backend/admin/info": controller.Admin.Info,
 					})
+
+					group.Bind(controller.File)
 				})
 			})
 			s.Run()
@@ -164,11 +166,7 @@ func authAfterFunc(r *ghttp.Request, respData gtoken.Resp) {
 		response.Auth(r)
 		return
 	}
-	//账号被冻结拉黑
-	if adminInfo.DeletedAt != nil {
-		response.AuthBlack(r)
-		return
-	}
+
 	r.SetCtxVar(consts.CtxAdminId, adminInfo.Id)
 	r.SetCtxVar(consts.CtxAdminName, adminInfo.Name)
 	r.SetCtxVar(consts.CtxAdminIsAdmin, adminInfo.IsAdmin)
