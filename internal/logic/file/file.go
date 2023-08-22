@@ -64,5 +64,6 @@ func (s *sFile) Upload(ctx context.Context, in model.FileUpLoadInput) (out *mode
 		Id:   uint(id),
 		Name: data.Name,
 		Src:  data.Src,
+		Url:  data.Url,
 	}, nil
 }

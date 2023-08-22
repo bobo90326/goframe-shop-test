@@ -14,3 +14,6 @@
 2023-08-22 22:47:38.212 [DEBU] {a06ce138ecbb7d17bd7b827bb4117ff4} [  5 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `file_info`
 2023-08-22 22:47:38.213 [DEBU] {a06ce138ecbb7d17bd7b827bb4117ff4} [  1 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `file_info` WHERE (`user_id`=3) AND (`created_at` >= '2023-08-22 22:48:38')
 2023-08-22 22:47:38.219 [DEBU] {a06ce138ecbb7d17bd7b827bb4117ff4} [  4 ms] [default] [rows:1  ] INSERT INTO `file_info`(`src`,`url`,`user_id`,`name`,`created_at`,`updated_at`) VALUES('upload/20230822/cuz5me6dk5lcggrxdp.png','/upload/20230822/cuz5me6dk5lcggrxdp.png',3,'cuz5me6dk5lcggrxdp.png','2023-08-22 22:47:38','2023-08-22 22:47:38') 
+2023-08-22 23:11:54.828 [DEBU] {2009c95d3fbd7d173ec4f27029dddd4f} [  8 ms] [default] [rows:7  ] SHOW FULL COLUMNS FROM `file_info`
+2023-08-22 23:11:54.829 [DEBU] {2009c95d3fbd7d173ec4f27029dddd4f} [  1 ms] [default] [rows:1  ] SELECT COUNT(1) FROM `file_info` WHERE (`user_id`=3) AND (`created_at` >= '2023-08-22 23:12:54')
+2023-08-22 23:11:54.833 [DEBU] {2009c95d3fbd7d173ec4f27029dddd4f} [  3 ms] [default] [rows:1  ] INSERT INTO `file_info`(`created_at`,`updated_at`,`name`,`src`,`url`,`user_id`) VALUES('2023-08-22 23:11:54','2023-08-22 23:11:54','cuz64zc4ynqolx3gqm.png','upload/20230822/cuz64zc4ynqolx3gqm.png','/upload/20230822/cuz64zc4ynqolx3gqm.png',3) 
