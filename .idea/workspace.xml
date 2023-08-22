@@ -5,31 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0590bd0-4a2f-4af9-9337-f588dca60a16" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/backend/file.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/controller/file.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/dao/internal/file_info.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/logic/file/file.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/model/file.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goframe-shop-test" beforeDir="false" afterPath="$PROJECT_DIR$/goframe-shop-test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/cmd/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/cmd/cmd.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/logic/logic.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/logic/logic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/do/admin_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/do/admin_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/do/cart_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/do/cart_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/do/category_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/do/category_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/do/collection_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/do/collection_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/do/goods_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/do/goods_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/do/order_goods_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/do/order_goods_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/do/order_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/do/order_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/entity/admin_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/entity/admin_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/entity/cart_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/entity/cart_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/entity/category_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/entity/category_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/entity/collection_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/entity/collection_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/entity/goods_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/entity/goods_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/entity/order_goods_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/entity/order_goods_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/entity/order_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/entity/order_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest/config/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/manifest/config/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/20230822/cuz5iows9riwxhxczy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/20230822/cuz5jaz3iazs9blgfm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/20230822/cuz5me6dk5lcggrxdp.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +107,7 @@
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/internal/logic/file/file.go</url>
           <line>57</line>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
