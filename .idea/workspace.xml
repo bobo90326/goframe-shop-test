@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0590bd0-4a2f-4af9-9337-f588dca60a16" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/internal/cmd/loginAuth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/logic/file/file.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/logic/file/file.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/backend/admin.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/backend/admin.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/backend/date.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/backend/date.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/backend/file.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/backend/file.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/backend/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/backend/login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/backend/permission.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/backend/permission.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/backend/position.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/backend/position.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/backend/role.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/backend/role.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/backend/roration.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/backend/roration.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goframe-shop-test" beforeDir="false" afterPath="$PROJECT_DIR$/goframe-shop-test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/cmd/cmd.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/cmd/cmd.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/consts/consts.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/consts/consts.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +42,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -39,33 +54,33 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/mac",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mac&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/api/frontend" />
@@ -106,9 +121,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/internal/logic/file/file.go</url>
-          <line>57</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/../go/pkg/mod/github.com/goflyfox/gtoken@v1.5.7/gtoken/gtoken.go</url>
+          <line>283</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
