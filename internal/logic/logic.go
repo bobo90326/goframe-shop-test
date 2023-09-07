@@ -7,6 +7,7 @@ package logic
 import (
 	_ "goframe-shop-test/internal/logic/admin"
 	_ "goframe-shop-test/internal/logic/bizctx"
+	_ "goframe-shop-test/internal/logic/category"
 	_ "goframe-shop-test/internal/logic/data"
 	_ "goframe-shop-test/internal/logic/file"
 	_ "goframe-shop-test/internal/logic/login"

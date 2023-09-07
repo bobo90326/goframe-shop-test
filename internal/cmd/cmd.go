@@ -55,7 +55,10 @@ var (
 						"/admin/info": controller.Admin.Info,
 					})
 
-					group.Bind(controller.File)
+					group.Bind(
+						controller.File,
+						controller.Category, //商品分类管理
+					)
 				})
 			})
 			s.Run()
