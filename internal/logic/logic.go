@@ -18,4 +18,5 @@ import (
 	_ "goframe-shop-test/internal/logic/role"
 	_ "goframe-shop-test/internal/logic/rotation"
 	_ "goframe-shop-test/internal/logic/session"
+	_ "goframe-shop-test/internal/logic/user_coupon"
 )
