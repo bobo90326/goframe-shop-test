@@ -12,6 +12,7 @@ import (
 	_ "goframe-shop-test/internal/logic/data"
 	_ "goframe-shop-test/internal/logic/file"
 	_ "goframe-shop-test/internal/logic/goods"
+	_ "goframe-shop-test/internal/logic/goods_options"
 	_ "goframe-shop-test/internal/logic/login"
 	_ "goframe-shop-test/internal/logic/middleware"
 	_ "goframe-shop-test/internal/logic/permission"
