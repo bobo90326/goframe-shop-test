@@ -9,7 +9,6 @@ import (
 	"goframe-shop-test/internal/service"
 )
 
-// 承上启下
 // Article 内容管理
 var Article = cArticle{}
 
@@ -40,10 +39,9 @@ func (a *cArticle) Update(ctx context.Context, req *backend.ArticleUpdateReq) (r
 	if err != nil {
 		return nil, err
 	}
+	//获取当前登录用户
+	data.UserId = gconv.Int(ctx.Value(consts.CtxAdminId))
 	err = service.Article().Update(ctx, data)
-	if err != nil {
-		return nil, err
-	}
 	return &backend.ArticleUpdateRes{Id: req.Id}, nil
 }
 
@@ -55,7 +53,6 @@ func (a *cArticle) List(ctx context.Context, req *backend.ArticleGetListCommonRe
 	if err != nil {
 		return nil, err
 	}
-
 	return &backend.ArticleGetListCommonRes{List: getListRes.List,
 		Page:  getListRes.Page,
 		Size:  getListRes.Size,
