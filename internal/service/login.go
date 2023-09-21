@@ -5,8 +5,17 @@
 
 package service
 
+import (
+	"goframe-shop-test/internal/model"
+
+	"golang.org/x/net/context"
+)
+
 type (
-	ILogin interface{}
+	ILogin interface {
+		Login(ctx context.Context, in model.UserLoginInput) error
+		Logout(ctx context.Context) error
+	}
 )
 
 var (

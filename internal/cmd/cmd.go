@@ -22,7 +22,7 @@ var (
 			if err != nil {
 				return err
 			}
-			// 管理后台路由组
+			//管理后台路由组
 			s.Group("/backend", func(group *ghttp.RouterGroup) {
 				group.Middleware(
 					service.Middleware().CORS,
@@ -51,18 +51,24 @@ var (
 						controller.Rotation,     // 轮播图
 						controller.Position,     // 手工位
 						controller.File,         //从0到1实现文件入库
-						//controller.Upload,     //实现可跨项目使用的文件上云工具类
-						controller.Category,   //商品分类管理
-						controller.Coupon,     //商品优惠券管理
-						controller.UserCoupon, //用户优惠券管理
-						controller.Goods,      //商品管理
-						controller.GoodsOptions,
-						controller.Article, //文章管理&CMS
+						//controller.Upload,       //实现可跨项目使用的文件上云工具类
+						controller.Category,     //商品分类管理
+						controller.Coupon,       //商品优惠券管理
+						controller.UserCoupon,   //商品优惠券管理
+						controller.Goods,        //商品管理
+						controller.GoodsOptions, //商品规格管理
+						controller.Article,      //文章管理&CMS
 					)
 				})
 			})
-			// 后前台跟路名
-			s.Group("/frontend ", func(group *ghttp.RouterGroup) {
+			//---------------------华丽的分割线-------------------
+			// 启动前台项目gtoken
+			frontendToken, err := StartFrontendGToken()
+			if err != nil {
+				return err
+			}
+			//前台项目路由组
+			s.Group("/frontend", func(group *ghttp.RouterGroup) {
 				group.Middleware(
 					service.Middleware().CORS,
 					service.Middleware().Ctx,
@@ -70,8 +76,19 @@ var (
 				)
 				//不需要登录的路由组绑定
 				group.Bind(
-					controller.User.Register, // 用户注册
+					controller.User.Register, //用户注册
 				)
+				//需要登录鉴权的路由组
+				group.Group("/", func(group *ghttp.RouterGroup) {
+					err := frontendToken.Middleware(ctx, group)
+					if err != nil {
+						return
+					}
+					//需要登录鉴权的接口放到这里
+					group.Bind(
+						controller.User.Info, //当前登录用户的信息
+					)
+				})
 			})
 			s.Run()
 			return nil
