@@ -14,3 +14,12 @@ type RegisterInput struct {
 type RegisterOutput struct {
 	Id uint
 }
+
+type UpdatePasswordInput struct {
+	Password     string `json:"password"     description:""`
+	UserSalt     string `json:"userSalt"     description:"加密盐 生成密码用"`
+	SecretAnswer string `json:"secretAnswer" description:"密保问题的答案"`
+}
+type UpdatePasswordOutput struct {
+	Id uint
+}
