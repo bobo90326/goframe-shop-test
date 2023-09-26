@@ -9,6 +9,7 @@ import (
 	_ "goframe-shop-test/internal/logic/article"
 	_ "goframe-shop-test/internal/logic/bizctx"
 	_ "goframe-shop-test/internal/logic/category"
+	_ "goframe-shop-test/internal/logic/collection"
 	_ "goframe-shop-test/internal/logic/coupon"
 	_ "goframe-shop-test/internal/logic/data"
 	_ "goframe-shop-test/internal/logic/file"

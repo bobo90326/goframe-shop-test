@@ -88,6 +88,7 @@ var (
 					group.Bind(
 						controller.User.Info,           //当前登录用户的信息
 						controller.User.UpdatePassword, //修改密码
+						controller.Collection,
 					)
 				})
 			})
