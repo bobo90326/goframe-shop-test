@@ -68,3 +68,9 @@ type ArticleItem struct {
 	Desc   string `json:"desc"`
 	PicUrl string `json:"pic_url"`
 }
+
+type CheckIsCollectInput struct {
+	UserId   uint
+	ObjectId uint
+	Type     uint8
+}

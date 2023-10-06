@@ -19,6 +19,7 @@ import (
 	_ "goframe-shop-test/internal/logic/middleware"
 	_ "goframe-shop-test/internal/logic/permission"
 	_ "goframe-shop-test/internal/logic/position"
+	_ "goframe-shop-test/internal/logic/praise"
 	_ "goframe-shop-test/internal/logic/role"
 	_ "goframe-shop-test/internal/logic/rotation"
 	_ "goframe-shop-test/internal/logic/session"
