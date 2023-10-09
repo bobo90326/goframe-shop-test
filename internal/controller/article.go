@@ -9,6 +9,7 @@ import (
 	"goframe-shop-test/internal/service"
 )
 
+// 承上启下
 // Article 内容管理
 var Article = cArticle{}
 

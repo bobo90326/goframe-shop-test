@@ -1,6 +1,7 @@
 package model
 
 import (
+	"goframe-shop-test/internal/model/do"
 	"goframe-shop-test/internal/model/entity"
 )
 
@@ -56,4 +57,15 @@ type GoodsGetListOutputItem struct {
 
 type GoodsSearchOutputItem struct {
 	GoodsGetListOutputItem
+}
+
+type GoodsDetailInput struct {
+	Id uint
+}
+
+type GoodsDetailOutput struct {
+	do.GoodsInfo
+	Options   []do.GoodsOptionsInfo `orm:"with:goods_id =id"`
+	Comments  []do.CommentInfo      `orm:"with:object_id = id, where:type =1"`
+	IsComment bool
 }

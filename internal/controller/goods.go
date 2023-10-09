@@ -4,6 +4,7 @@ import (
 	"context"
 	"github.com/gogf/gf/v2/util/gconv"
 	"goframe-shop-test/api/backend"
+	"goframe-shop-test/api/frontend"
 	"goframe-shop-test/internal/model"
 	"goframe-shop-test/internal/service"
 )
@@ -58,4 +59,16 @@ func (a *cGoods) List(ctx context.Context, req *backend.GoodsGetListCommonReq) (
 		Page:  getListRes.Page,
 		Size:  getListRes.Size,
 		Total: getListRes.Total}, nil
+}
+
+func (a *cGoods) GoodsDetail(ctx context.Context, req *frontend.GoodsDetailReq) (res *frontend.GoodsDetailRes, err error) {
+	detail, err := service.Goods().Detail(ctx, model.GoodsDetailInput{
+		Id: req.Id,
+	})
+	if err != nil {
+		return nil, err
+	}
+	res = &frontend.GoodsDetailRes{}
+	gconv.Struct(detail, res)
+	return res, nil
 }
